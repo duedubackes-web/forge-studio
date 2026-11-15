@@ -1,0 +1,14 @@
+[
+  {
+    "member": "VSCode-linux-x64/resources/app/out/bootstrap-fork.js",
+    "extractedAs": "out/bootstrap-fork.js",
+    "bytes": 124259,
+    "sha256": "0695046b68ce9e4cfb423fcf1315551b6d01801ea50dd1dd4572ca955995961e"
+  },
+  {
+    "member": "VSCode-linux-x64/resources/app/package.json",
+    "extractedAs": "package.json",
+    "bytes": 14255,
+    "sha256": "b0432bb86edb4ed7ec1832bbe98977ba5dbbce5d2f8905adf02672d025aea9e1"
+  }
+]

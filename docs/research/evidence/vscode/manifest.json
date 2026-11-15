@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "scope": "Static inspection of two selected release files, one parsed JavaScript source; not the complete VS Code application",
+  "artifacts": [
+    {
+      "file": "archive-identity.json",
+      "bytes": 338,
+      "sha256": "f06ae08de0a34b843ada5beab4ce934a5f0db9d4cd0bf40d1eed89a7657bc8fa"
+    },
+    {
+      "file": "selected-artifacts.json",
+      "bytes": 433,
+      "sha256": "e29f65b842dedaabd970edc343a0e776c4fa16e70a2ae32442609687e9f72ace"
+    },
+    {
+      "file": "source-manifest.json",
+      "bytes": 2993,
+      "sha256": "2aea755a8207e6c0ebecf1e7b7e95ef231953902996a1f98b40c73e6cfe9a244"
+    },
+    {
+      "file": "static-analysis-summary.json",
+      "bytes": 3414,
+      "sha256": "70163aaa25d5070de140123889c4461a1fdc523b2e9312ee854b6b19c0550589"
+    }
+  ]
+}

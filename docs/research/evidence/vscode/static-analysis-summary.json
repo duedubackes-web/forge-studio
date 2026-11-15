@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "scope": "Static inspection of two selected release files, one parsed JavaScript source; not the complete VS Code application",
+  "rea": {
+    "version": "6.9.0",
+    "evidenceId": "ev_ccbe2bf9ff9bda5d7f7cf0d8364cf463cc503e6664e2f3df70a58ba1610e99c9",
+    "operation": "analyze_javascript_application",
+    "rawEvidenceSha256": "5e474dfa0d0e59a6337f31beabd60f72fea569f4fea87fcce77c4a197e7c04bd",
+    "selectedArtifactRootSha256": "4c0b19a92369245208a4780c13e518e746521975720017899b6dd61c9bc4f047",
+    "statistics": {
+      "relevant_files": 2,
+      "nested_asar_containers": 0,
+      "text_bytes_read": 124259,
+      "invalid_utf8_files": 0,
+      "parsed_javascript_files": 1,
+      "skipped_javascript_files": 0,
+      "visited_ast_nodes": 21182,
+      "findings": 36,
+      "modules": 0,
+      "parse_failures": 0
+    },
+    "sourceSelection": {
+      "requested_paths": [
+        "out/bootstrap-fork.js"
+      ],
+      "unselected_files": 1
+    },
+    "retainedGraphNodes": 24,
+    "retainedGraphEdges": 40,
+    "limitations": [
+      "Alias selection expansion was conservatively bounded (maximum 512 additional selector states); selected paths remain unknown. Semantic alias-selections budget reached: semantic_precision.alias_selections=512 additional selector states (default 512). Increase semantic_precision.alias_selections on the next analysis call (analyze_javascript_application or analyze_web_bundle), or pass --semantic-precision JSON on the CLI; no REA restart is required. Worker memory, transfer and graph-retention limits remain independent. Cyclic or unsupported evaluations remain unknown regardless of budget.",
+      "Caller-selected source analysis leaves 1 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+      "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+      "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+      "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+      "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+      "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+      "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+    ]
+  },
+  "craftAnything": {
+    "version": "0.6.1",
+    "evidenceId": "ev_e47c34ff513e89a9f92e6416568bc9a9d3f6ed6e0c3172fd2bbee2dd472d0dda",
+    "operation": "js_app_map",
+    "rawEvidenceSha256": "7a3d82972c5a3f84eec37e3f7c544e3a05c7ed0d58379ba2eb00366b4a1c2ca6",
+    "coverageOfSelectedInput": {
+      "examined": 2,
+      "status": "complete",
+      "total": 2
+    },
+    "parsedSourceModules": 1,
+    "classificationOfSelectedSubset": "node",
+    "limitations": [
+      {
+        "code": "static_only",
+        "message": "Static reading only: code built at run time (eval, computed requires, remote content) is invisible; IPC pairs need literal channel names."
+      }
+    ]
+  },
+  "redistribution": "Only structural summary and identities published. Raw tool graphs, source excerpts and Microsoft release binaries remain outside this repository."
+}

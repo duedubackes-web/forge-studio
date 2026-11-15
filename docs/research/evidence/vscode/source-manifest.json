@@ -1,0 +1,64 @@
+{
+  "repository": "https://github.com/microsoft/vscode",
+  "commit": "69047191fc427f2f92828279aae1d90d8eeda7ab",
+  "releaseVersion": "1.146.0",
+  "scope": "Selected public files aligned to release commit; not a complete source audit",
+  "sources": [
+    {
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/LICENSE.txt",
+      "bytes": 1088,
+      "sha256": "9480271317925265e806a9a196aaa33410a962fa9d4d1e248a4a5187bc8c9df9",
+      "status": 200
+    },
+    {
+      "path": "product.json",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/product.json",
+      "bytes": 8032,
+      "sha256": "6539f52e30fc7071dce22addfe842c92d511c7574420532d21fca136aae48176",
+      "status": 200
+    },
+    {
+      "path": "src/vs/base/common/lifecycle.ts",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/src/vs/base/common/lifecycle.ts",
+      "bytes": 26216,
+      "sha256": "3ce8457a9317bf4b5008a22ddd9fe43a6d68b3069d57f8ec7549d3188e80d424",
+      "status": 200
+    },
+    {
+      "path": "src/vs/platform/instantiation/common/instantiation.ts",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/src/vs/platform/instantiation/common/instantiation.ts",
+      "bytes": 4383,
+      "sha256": "87247ec79a014320fd3d3d7a4a763308b94219c95a9cf58b53c3e3a1e3aa89a6",
+      "status": 200
+    },
+    {
+      "path": "src/vs/platform/workspace/common/workspaceTrust.ts",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/src/vs/platform/workspace/common/workspaceTrust.ts",
+      "bytes": 4565,
+      "sha256": "6ab16cb613438179383cc905e2595515c11a3277c2c075e5496fcbe8a1cfdd0b",
+      "status": 200
+    },
+    {
+      "path": "src/vs/workbench/api/common/extHost.protocol.ts",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/src/vs/workbench/api/common/extHost.protocol.ts",
+      "bytes": 207629,
+      "sha256": "c8c961cf0cd985daedb1950a4d5ae3f09b83c44b35845dfd0f3bf002b47435e6",
+      "status": 200
+    },
+    {
+      "path": "src/vs/workbench/services/extensions/common/extensions.ts",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/src/vs/workbench/services/extensions/common/extensions.ts",
+      "bytes": 22446,
+      "sha256": "170d28aa8589c907a4fa0490ed20007f354eaa49ffd2836b5e36d305827a6501",
+      "status": 200
+    },
+    {
+      "path": "src/vs/workbench/contrib/tasks/common/tasks.ts",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/69047191fc427f2f92828279aae1d90d8eeda7ab/src/vs/workbench/contrib/tasks/common/tasks.ts",
+      "bytes": 38412,
+      "sha256": "33536e3363f367fe5459153ff880c1296bee2c91884cf7d4a485d0ff67a4a682",
+      "status": 200
+    }
+  ]
+}

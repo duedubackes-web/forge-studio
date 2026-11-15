@@ -1,0 +1,3 @@
+[submodule "references/vscode"]
+	path = references/vscode
+	url = https://github.com/microsoft/vscode.git

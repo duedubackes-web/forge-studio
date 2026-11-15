@@ -71,3 +71,12 @@ F21 parcial: aceite manual vinculado à especificação e às evidências entreg
 F21 parcial: tarefa pode exportar dossiê Markdown com critérios, evidências e aceite, formando uma entrega de planejamento portável. Histórico e estado atual permanecem distintos. A biblioteca de entregáveis, o agente conectado e a execução hospedada ainda não estão implementados.
 
 Este avanço aplica os princípios de proveniência observados na pesquisa Codex e de separação de tarefas/resultados discutida na análise Duet. Não houve nova inspeção autenticada de concorrentes nesta etapa.
+
+## Pesquisa VS Code
+
+REA e Craft Anything aplicados a um recorte identificado da distribuição oficial 1.146.0; fonte aberta referenciada por submódulo fixado. [Cobertura e achados](research/vscode.md).
+
+- F24 — P0 proposto: cancelamento acompanhado de encerramento de processos e limpeza; depende do runtime real de execução.
+- F25 — P1 proposto: contrato de extensões com capacidades declaradas e fronteira explícita de confiança. Não presumir que um processo separado seja sandbox.
+
+Nenhum runtime de VS Code ou sistema de extensões foi incorporado ao Forge nesta etapa.

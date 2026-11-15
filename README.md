@@ -106,6 +106,8 @@ Registra commit, branch e alterações locais, sem executar código do projeto o
 
 ## Pesquisa e implementação
 
+- [VS Code: artefatos oficiais e arquitetura](docs/research/vscode.md)
+- [Fonte pública VS Code por referência fixada](references/README.md)
 - [Claude Duet: investigação pública e requisitos](docs/research/claude-duet.md)
 - [Codex: fontes públicas e limites da análise](docs/research/codex.md)
 - [v0, Vercel, Codespaces e relatos públicos](docs/research/v0-vercel-codespaces.md)
