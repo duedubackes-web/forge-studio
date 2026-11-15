@@ -137,6 +137,17 @@ function renderRuns() {
         `Limite configurado: ${money(run.plan.budgetCents)} · Gasto: ${money(run.spentCents)}`,
       ),
     );
+    card.append(
+      el(
+        "a",
+        {
+          className: "back",
+          href: `/api/projects/${state.project.id}/runs/${run.id}/dossier`,
+          download: "",
+        },
+        "Exportar dossiê Markdown",
+      ),
+    );
     for (const feature of run.plan.features)
       card.append(
         el(

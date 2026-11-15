@@ -338,3 +338,62 @@ test("manual acceptance binds current evidence, is idempotent and never survives
   assert.equal(failed.body.review.accepted, false);
   assert.equal(failed.body.review.status, "needs-evidence");
 });
+
+test("dossier download binds project, specification, current evidence and content digest", async (t) => {
+  const f = await fixture(t);
+  const p = (
+    await f.request("/api/projects", {
+      name: "Dossiê original",
+      description: "Contexto para implementar um portal.",
+    })
+  ).body;
+  const path = `/api/projects/${p.id}`;
+  let run = (
+    await f.request(path + "/runs", {
+      prompt: "Implementar portal com login e cadastro de clientes.",
+      budgetCents: 2500,
+    })
+  ).body;
+  for (const gate of ["functional", "visual", "data-isolation"])
+    run = (
+      await f.request(`${path}/runs/${run.id}/checks`, {
+        gate,
+        outcome: "pass",
+        evidence: "Conferência manual registrada para esta tarefa.",
+      })
+    ).body;
+  await f.request(`${path}/runs/${run.id}/accept`, {
+    expectedSpecHash: run.specHash,
+    expectedCheckIds: run.review.currentCheckIds,
+  });
+  const endpoint = `${path}/runs/${run.id}/dossier`;
+  let response = await fetch(f.base + endpoint);
+  let text = await response.text();
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-disposition"), /^attachment;/);
+  assert.match(response.headers.get("content-type"), /^text\/markdown/);
+  const { createHash } = await import("node:crypto");
+  assert.equal(
+    response.headers.get("x-artifact-sha256"),
+    createHash("sha256").update(text).digest("hex"),
+  );
+  assert.ok(text.includes(p.id) && text.includes(run.specHash));
+  assert.match(text, /Aceite manual vigente/);
+  assert.match(text, /IA não conectada/);
+  await f.request(`${path}/runs/${run.id}/checks`, {
+    gate: "visual",
+    outcome: "fail",
+    evidence: "Uma regressão visual foi observada na revisão posterior.",
+  });
+  text = await (await fetch(f.base + endpoint)).text();
+  assert.match(text, /Critérios pendentes de revisão/);
+  assert.doesNotMatch(text, /Aceite manual vigente/);
+  assert.match(text, /Histórico de aceites/);
+  const other = (await f.request("/api/projects", { name: "Outro projeto" }))
+    .body;
+  assert.equal(
+    (await fetch(`${f.base}/api/projects/${other.id}/runs/${run.id}/dossier`))
+      .status,
+    404,
+  );
+});

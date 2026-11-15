@@ -1,6 +1,6 @@
 # Forge Studio
 
-Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.5.0.**
+Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.6.0.**
 
 Esta primeira entrega contém um Studio funcional de planejamento e registro de evidências, uma base de agente eve e pesquisa competitiva rastreável. **Ainda não é um gerador de aplicativos equivalente ao Lovable.**
 
@@ -87,6 +87,14 @@ Abra um projeto e use **Exportar backup do projeto**. O JSON inclui planos e evi
 Após registrar aprovação manual para os três critérios, use **Aceitar revisão**. O aceite registra especificação, evidências e data. Nova evidência exige novo aceite; uma falha volta a bloquear a revisão. Repetir a mesma solicitação não duplica o registro. Na recuperação de backup, aceites antigos ficam no histórico importado e não aprovam a cópia.
 
 Esse fluxo é local e de usuário único: não comprova execução automatizada de testes, identidade multiusuário ou publicação de um aplicativo.
+
+## Dossiê para implementação
+
+Em cada tarefa, use **Exportar dossiê Markdown**. O arquivo inclui contexto, objetivo, módulos, etapas, critérios, evidências, histórico de aceite e identidade da especificação. O estado vigente é recalculado; aceite histórico não aparece como aprovação atual após uma falha.
+
+O documento pode acompanhar uma solicitação a um agente externo, mas não inicia execução nem autoriza ações. O orçamento local não controla esse agente. Dados fornecidos pelo operador aparecem em blocos de referência; ainda devem ser tratados como conteúdo não confiável pelo leitor. O cabeçalho HTTP `X-Artifact-SHA256` identifica os bytes entregues, sem autenticar autoria.
+
+Veja um [exemplo com dados sintéticos](docs/examples/dossier-example.md). Guarde dossiês reais em local privado: podem conter objetivos e evidências do projeto.
 
 ## Inspecionar a base Git
 

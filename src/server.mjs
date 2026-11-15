@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 import { ZodError } from "zod";
 import { Store } from "./store.mjs";
 import { exportProject } from "./backup.mjs";
+import { createDossier } from "./dossier.mjs";
 const publicDir = fileURLToPath(new URL("../public/", import.meta.url));
 const assets = new Map([
   ["/", ["index.html", "text/html; charset=utf-8"]],
@@ -110,6 +111,25 @@ export function createApp({ dataPath }) {
           result ? 201 : 404,
           result ?? { error: "Projeto não encontrado." },
         );
+      }
+      const dossier = path.match(
+        /^\/api\/projects\/([a-f0-9-]+)\/runs\/([a-f0-9-]+)\/dossier$/,
+      );
+      if (dossier && req.method === "GET") {
+        const project = store.project(dossier[1]);
+        const run = project?.runs.find((r) => r.id === dossier[2]);
+        if (!run)
+          return send(res, 404, {
+            error: "Tarefa não encontrada neste projeto.",
+          });
+        const artifact = createDossier(project, run);
+        res.writeHead(200, {
+          "Content-Type": "text/markdown; charset=utf-8",
+          "Content-Disposition": `attachment; filename="forge-dossier-${run.id}.md"`,
+          "Cache-Control": "no-store",
+          "X-Artifact-SHA256": artifact.sha256,
+        });
+        return res.end(artifact.markdown);
       }
       const acceptance = path.match(
         /^\/api\/projects\/([a-f0-9-]+)\/runs\/([a-f0-9-]+)\/accept$/,

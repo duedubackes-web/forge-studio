@@ -59,3 +59,11 @@ O endpoint `POST /api/projects/:projectId/runs/:runId/accept` compara `expectedS
 `review.accepted` só fica verdadeiro enquanto o conjunto atual coincide com um aceite local válido. Alterações preservam o histórico, mas invalidam o aceite vigente. A importação remapeia IDs e marca registros como importados, sem conferir aprovação atual. O formato 2 de backup inclui aceites; o formato 1 continua suportado para projetos anteriores.
 
 O operador é o usuário do protótipo local; não há autenticação multiusuário nem autorização de publicação. Aceite manual não é resultado de teste automatizado.
+
+## Dossiê v0.6
+
+`GET /api/projects/:projectId/runs/:runId/dossier` gera um artefato Markdown por tarefa e verifica pertencimento ao projeto. Preserva os controles de Host/Origin da API, usa download como anexo e `Cache-Control: no-store`. O SHA-256 dos bytes retornados está em `X-Artifact-SHA256`. Não é assinatura de identidade.
+
+O gerador consulta `reviewStatus` e distingue situação vigente de registros históricos. Campos livres aparecem em blocos de texto com delimitador ajustado ao conteúdo, evitando que sejam interpretados como estrutura Markdown ativa. Isso não resolve prompt injection em um agente leitor: dados de referência continuam não confiáveis, e o documento não concede autoridade ao executor.
+
+A função não grava projeto, executa comandos ou chama modelos. O exemplo publicado usa somente dados sintéticos. Transferência ao agente é manual nesta versão; não representa conclusão de F05.

@@ -65,3 +65,9 @@ Nenhum desses recursos é anunciado como pronto.
 ## Ampliação v0.5
 
 F21 parcial: aceite manual vinculado à especificação e às evidências entregue. Aceite é idempotente; nova evidência ou importação exige reavaliação. A biblioteca de entregáveis e execução real por agente continuam pendentes. F17 passa a reconhecer backups 1 e 2; versões desconhecidas continuam recusadas.
+
+## Ampliação v0.6
+
+F21 parcial: tarefa pode exportar dossiê Markdown com critérios, evidências e aceite, formando uma entrega de planejamento portável. Histórico e estado atual permanecem distintos. A biblioteca de entregáveis, o agente conectado e a execução hospedada ainda não estão implementados.
+
+Este avanço aplica os princípios de proveniência observados na pesquisa Codex e de separação de tarefas/resultados discutida na análise Duet. Não houve nova inspeção autenticada de concorrentes nesta etapa.

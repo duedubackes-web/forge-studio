@@ -150,3 +150,26 @@ test("downloaded backup restores through file picker without losing the original
     page.getByRole("button", { name: /Recuperação pelo navegador/ }),
   ).toHaveCount(2);
 });
+
+test("implementation dossier downloads from the task card", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page
+    .getByLabel("Nome do projeto", { exact: true })
+    .fill("Dossiê no navegador");
+  await page.getByRole("button", { name: "Criar projeto" }).click();
+  await page
+    .getByLabel("Objetivo da tarefa")
+    .fill("Criar portal com login e dados de clientes.");
+  await page.getByRole("button", { name: "Gerar plano local" }).click();
+  const event = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Exportar dossiê Markdown" }).click();
+  const download = await event;
+  const { readFile } = await import("node:fs/promises");
+  const text = await readFile(await download.path(), "utf8");
+  expect(download.suggestedFilename()).toMatch(/^forge-dossier-.*\.md$/);
+  expect(text).toContain("Dossiê no navegador");
+  expect(text).toContain("Critérios pendentes de revisão");
+  expect(text).toContain("não está conectado a um agente executor");
+});

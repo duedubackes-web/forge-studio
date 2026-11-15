@@ -71,3 +71,11 @@ O workflow foi preparado para Node 24 e 26; a execução local registrada aqui u
 - Testes de API cobrem critério pendente, idempotência, revisão desatualizada, persistência, reaceite após mudança e importação sem aprovação automática.
 - O formato de backup 2 inclui histórico de aceite; o formato 1 continua aceito.
 - Não houve geração de código por IA, execução de aplicativos de usuário ou publicação de site nesta etapa.
+
+## Ampliação v0.6
+
+- `npm run check`: checagem de tipos e 18 testes de domínio/API/Git passaram.
+- Cinco testes de navegador passaram; o novo fluxo cria tarefa e baixa seu dossiê Markdown.
+- Teste de API confere digest dos bytes, contexto/especificação, aceite vigente, invalidação após falha e bloqueio de acesso por projeto incorreto.
+- O exemplo do dossiê é sintético; nenhuma informação real de conta ou projeto foi publicada.
+- Nenhuma chamada de IA ou execução externa foi adicionada.
