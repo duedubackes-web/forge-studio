@@ -55,3 +55,11 @@ O workflow foi preparado para Node 24 e 26; a execução local registrada aqui u
 - Aprovações importadas não satisfazem critérios atuais; novas declarações podem concluir a revisão.
 - Acesso autenticado Vercel confirmado pelo conector com leituras de identidade, equipes e metadados de projetos. Não foram lidos segredos, dados de aplicação ou arquivos privados para publicar no repositório.
 - Não houve inspeção de sessão autenticada do v0, chamada paga de modelo, implantação ou criação de recursos externos nesta etapa.
+
+## Ampliação v0.4
+
+- `npm run check`: tipos e 16 testes de domínio/API/inspeção Git passaram.
+- Inspeção Git: commit, mudanças staged/unstaged/untracked, HEAD destacado, repositório vazio, caminho inválido e normalização de subdiretório cobertos.
+- REA e Craft Anything concluíram a análise de dois registros HTTP, com o identificador da sessão local removido antes da análise. Manifestos e arquivos estão em `docs/research/evidence/codex/`.
+- Fonte pública Codex fixada no commit declarado no manifesto; nenhum código privado ou binário local do usuário foi extraído.
+- A UI só recebeu atualização do número da versão; os quatro fluxos de navegador seguem no CI.

@@ -1,6 +1,6 @@
 {
   "name": "forge-studio",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "imports": {
     "#*": "./agent/*",
@@ -17,7 +17,8 @@
     "test:browser": "playwright test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "backup:verify": "node scripts/verify-backup.mjs"
+    "backup:verify": "node scripts/verify-backup.mjs",
+    "repo:inspect": "node scripts/inspect-repository.mjs"
   },
   "dependencies": {
     "@vercel/connect": "2.7.0",

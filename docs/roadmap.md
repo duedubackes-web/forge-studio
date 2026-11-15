@@ -11,7 +11,7 @@ Legenda: entregue = funciona na base atual; parcial = parte funciona e o restant
 | F05 | P0         | Planejado | Studio conectado ao agente           | Uma solicitação autenticada recebe eventos reais e erros visíveis                     |
 | F06 | P0         | Planejado | Identidade e isolamento multiusuário | Usuário sem permissão não lê projeto, execução, arquivo ou stream de outro            |
 | F07 | P0         | Planejado | Worker de código em sandbox          | Gerar e executar um app próprio; cancelamento encerra processos e recursos            |
-| F08 | P0         | Planejado | Git por mudança                      | Branch, diff e commit verificáveis; conflito não sobrescreve alterações               |
+| F08 | P0         | Parcial   | Git por mudança                      | Branch, diff e commit verificáveis; conflito não sobrescreve alterações               |
 | F09 | P0         | Planejado | Preview com dados separados          | Escrita em um preview não aparece no ambiente principal nem em outro preview          |
 | F10 | P0         | Planejado | Evidência automatizada               | Teste real, saída, código de retorno, commit, ambiente e artefatos relacionados       |
 | F11 | P0         | Planejado | Orçamento transacional conectado     | Reservar antes do provedor; tolerar retry e crash sem dupla cobrança                  |
@@ -45,3 +45,9 @@ Dev container adicionado para configurar o desenvolvimento. A criação real em 
 F17: recuperação do formato 1 entregue na interface e API. Cria nova cópia, rejeita backups inconsistentes e exige nova revisão das evidências importadas. Migração entre versões de formato ainda não implementada.
 
 Acesso Vercel autenticado verificado em leitura; isso não implica acesso ao código da plataforma nem acesso à sessão do v0 no navegador. A inspeção visual autenticada do v0 permanece não verificada por ausência da ferramenta de navegador nesta sessão.
+
+## Ampliação v0.4
+
+F08: adicionada inspeção CLI de metadados Git, com commit/branch/estado local. Continua parcial em relação ao objetivo: não cria branches, não aplica diffs e não conecta o agente ao repositório.
+
+Pesquisa Codex: fonte pública fixada, protocolo de estados examinado e REA/Craft aplicados a uma captura HTTP limitada. Sem acesso à sessão local autenticada. [Relatório](research/codex.md).

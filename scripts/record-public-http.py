@@ -8,6 +8,12 @@ import urllib.error
 import urllib.request
 
 TARGETS = ["https://v0.app/ebb10", "https://vercel.com/ebb10", "https://github.com/codespaces"]
+TARGETS = sys.argv[2:] or TARGETS
+from urllib.parse import urlsplit
+for target in TARGETS:
+    parsed = urlsplit(target)
+    if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+        raise ValueError("Targets must be HTTPS URLs without credentials")
 entries = []
 current = None
 

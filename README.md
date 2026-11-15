@@ -1,6 +1,6 @@
 # Forge Studio
 
-Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.3.0.**
+Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.4.0.**
 
 Esta primeira entrega contém um Studio funcional de planejamento e registro de evidências, uma base de agente eve e pesquisa competitiva rastreável. **Ainda não é um gerador de aplicativos equivalente ao Lovable.**
 
@@ -82,8 +82,17 @@ Os testes de navegador iniciam um servidor próprio e usam dados temporários se
 
 Abra um projeto e use **Exportar backup do projeto**. O JSON inclui planos e evidências, com checksum SHA-256. Valide com `npm run backup:verify -- arquivo.json`. O checksum verifica integridade, não autenticidade. Na página de projetos, abra **Restaurar um projeto de backup**, selecione um JSON de até 2 MiB e restaure como nova cópia. O original é preservado e todas as evidências importadas exigem nova revisão. Somente o formato 1 é aceito; não há migração automática de versões futuras. Guarde o arquivo fora do runtime e em local privado. Importações usam identidades novas para evitar colisões entre projetos, execuções e evidências.
 
+## Inspecionar a base Git
+
+```sh
+npm run repo:inspect -- /caminho/do/repositorio
+```
+
+Registra commit, branch e alterações locais, sem executar código do projeto ou modificar Git. Estado sujo não é uma base pronta para verificação por commit. O hash cobre metadados; não lê nem preserva conteúdo de arquivos. A ferramenta é CLI local e ainda não está conectada ao agente.
+
 ## Pesquisa e implementação
 
+- [Codex: fontes públicas e limites da análise](docs/research/codex.md)
 - [v0, Vercel, Codespaces e relatos públicos](docs/research/v0-vercel-codespaces.md)
 - [Ambiente reproduzível](docs/development-environment.md)
 - [Análise competitiva e oportunidades](docs/research/competitive-analysis.md)

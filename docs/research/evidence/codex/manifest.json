@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "scope": "Two unauthenticated HTTP records; local session identifier redacted before tool analysis; no response body content retained",
+  "artifacts": [
+    {
+      "file": "codex-http.har",
+      "bytes": 3718,
+      "sha256": "a566b040ceca7a8c7552fba756e3b71625891b34fdf7bde5ae0cd22aacd6e201"
+    },
+    {
+      "file": "rea.json",
+      "bytes": 9741,
+      "sha256": "5cd2454701db773a05ce064391babd92638acadfafdbd41399d13dc63ebf44ae"
+    },
+    {
+      "file": "craft.json",
+      "bytes": 3463,
+      "sha256": "25db6f4e0d4aa18da34151db8bee30ba1b5d4a1011345cd7e7f5c093c34385ad"
+    }
+  ]
+}
