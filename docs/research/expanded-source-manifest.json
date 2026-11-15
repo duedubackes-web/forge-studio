@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "retrievedAtUtc": "2026-11-15T10:31:06.470803+00:00",
+  "scope": "Selected public documentation and public reports; not authenticated product tests",
+  "sources": [
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs",
+      "contentType": "text/markdown",
+      "bytesRead": 7084,
+      "sha256": "afe64cae077c67b48bee4d4914d5ac3fecbd5afd8dbef7fcf07bb9725d0f88db"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/sandbox",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/sandbox",
+      "contentType": "text/markdown",
+      "bytesRead": 5096,
+      "sha256": "a44de5ba323fb94f04752c2672c8ce712f106f48ef7cdb6b80dc4d543334742f"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/agentic-features",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/agentic-features",
+      "contentType": "text/markdown",
+      "bytesRead": 5686,
+      "sha256": "9644cae27571547c4dee890377e8c8f8127ae04da831fda9eeadc7ce5c60936f"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/terminal-commands",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/terminal-commands",
+      "contentType": "text/markdown",
+      "bytesRead": 10201,
+      "sha256": "e7f997577feb6aea230e2a5649e5921285594af490ecfacb99e5b791e8ab5da1"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/versions",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/versions",
+      "contentType": "text/markdown",
+      "bytesRead": 1189,
+      "sha256": "f7a13973655edd3ecb5026ff007cd8137f2fc247b85d6845ac402335850c472c"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/github",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/github",
+      "contentType": "text/markdown",
+      "bytesRead": 9415,
+      "sha256": "f5d89c5541aeb6f2bf7a1c03957956324e99cbe2440d771422e6428beb463368"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/design-systems",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/design-systems-legacy",
+      "contentType": "text/markdown",
+      "bytesRead": 8397,
+      "sha256": "8bc2243802711af5fdc4701b55c1836b5aa0d2fe1f15579416109e7ea2dfd09d"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/deployments",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/deployments",
+      "contentType": "text/markdown",
+      "bytesRead": 6144,
+      "sha256": "d9ec959f24daa2af28a58189a620f8fd96e08de66e5721e59fbc9e26f862aaf4"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/security",
+      "status": 200,
+      "finalUrl": "https://v0.app/docs/security",
+      "contentType": "text/markdown",
+      "bytesRead": 5033,
+      "sha256": "ae180773719e3ddea897992d8573308674f5dd7aabebc23dde305c25e0e94adf"
+    },
+    {
+      "category": "v0",
+      "url": "https://v0.app/docs/usage",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "category": "vercel",
+      "url": "https://vercel.com/docs",
+      "status": 200,
+      "finalUrl": "https://vercel.com/docs",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 9867,
+      "sha256": "352aadd33522ddfcaebf42e2e705b940bcd15438f1fdc89feb26fa64b8016307"
+    },
+    {
+      "category": "vercel",
+      "url": "https://vercel.com/docs/spend-management",
+      "status": 200,
+      "finalUrl": "https://vercel.com/docs/spend-management",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 20521,
+      "sha256": "2288ce85b4c35a66967ef3848f7bfa0dcc92a0cdd4ee08d4579245032fb173c3"
+    },
+    {
+      "category": "vercel",
+      "url": "https://vercel.com/docs/instant-rollback",
+      "status": 200,
+      "finalUrl": "https://vercel.com/docs/instant-rollback",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 12235,
+      "sha256": "8faece0392b8b5ded4193d44f026870e1380c164b07682deeec47dbdd5f28288"
+    },
+    {
+      "category": "vercel",
+      "url": "https://vercel.com/docs/rolling-releases",
+      "status": 200,
+      "finalUrl": "https://vercel.com/docs/rolling-releases",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 21364,
+      "sha256": "ecf07883f25f23864fcb62fb3ac5cf7001a2868e441ef3a7d086c0d2d748bdcc"
+    },
+    {
+      "category": "vercel",
+      "url": "https://vercel.com/docs/observability",
+      "status": 200,
+      "finalUrl": "https://vercel.com/docs/observability",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 12492,
+      "sha256": "ea2ad3a748d7aa836ced81547ea303bf168e585cfb4a5088a45c1f68a9885446"
+    },
+    {
+      "category": "codespaces",
+      "url": "https://docs.github.com/en/codespaces/about-codespaces/what-are-codespaces",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/codespaces/about-codespaces/what-are-codespaces",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 7510,
+      "sha256": "1d8c1ffe49f460c58550cbf3d36f790fbee5a2e1db7f3d056337dfe1af4075b1"
+    },
+    {
+      "category": "codespaces",
+      "url": "https://docs.github.com/en/codespaces/about-codespaces/deep-dive",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/codespaces/about-codespaces/deep-dive",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 18144,
+      "sha256": "d165e640e57f56042f694463f9b14be9cc514cd466dc093a0926cf94ad743a6f"
+    },
+    {
+      "category": "codespaces",
+      "url": "https://docs.github.com/en/codespaces/troubleshooting/exporting-changes-to-a-branch",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/codespaces/troubleshooting/exporting-changes-to-a-branch",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 5523,
+      "sha256": "19635bc0b9d1339caee8ff220a064ca4f5a28b7461ed5596f54d85e8309b675e"
+    },
+    {
+      "category": "codespaces",
+      "url": "https://docs.github.com/en/codespaces/setting-your-user-preferences/configuring-automatic-deletion-of-your-codespaces",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/codespaces/setting-your-user-preferences/configuring-automatic-deletion-of-your-codespaces",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 14136,
+      "sha256": "10e84232e781bd34ac8c3b7e0f89abee0d049a6c069e3badfdec311671bfe9b2"
+    },
+    {
+      "category": "codespaces",
+      "url": "https://docs.github.com/en/codespaces/developing-in-a-codespace/persisting-environment-variables-and-temporary-files",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/codespaces/developing-in-a-codespace/persisting-environment-variables-and-temporary-files",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 7136,
+      "sha256": "89983dd77c1784d4ef547eded52379567f862e67c5750b71122d338530ac6cb8"
+    },
+    {
+      "category": "codespaces",
+      "url": "https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 24324,
+      "sha256": "d45fa32d2a90eeb997d67d8e2f60d38d7193965fe3ab6dbf3e2901e7a627d619"
+    },
+    {
+      "category": "feedback",
+      "url": "https://community.vercel.com/t/is-v0-max-buggy/33630",
+      "status": 200,
+      "finalUrl": "https://community.vercel.com/t/is-v0-max-buggy/33630",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 2234,
+      "sha256": "3073464da903de6f8c695ebce962a01bb512fbd59a06d9fae3d44e43c20cb474"
+    },
+    {
+      "category": "feedback",
+      "url": "https://community.vercel.com/t/cant-access-previous-chats-history-of-v0-project/13563",
+      "status": 200,
+      "finalUrl": "https://community.vercel.com/t/cant-access-previous-chats-history-of-v0-project/13563",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 2626,
+      "sha256": "551745d25e0eba40974f7338261599d923602af93625c41147da57360d676bee"
+    },
+    {
+      "category": "feedback",
+      "url": "https://community.vercel.com/t/vercel-build-minutes-billing-enabled-by-default-causing-unexpected-charges/37434/7",
+      "status": 200,
+      "finalUrl": "https://community.vercel.com/t/vercel-build-minutes-billing-enabled-by-default-causing-unexpected-charges/37434/7",
+      "contentType": "text/markdown; charset=utf-8",
+      "bytesRead": 7580,
+      "sha256": "df25608c3660ca3f7d601a55307a729f8753251336b8f3768e3020cef6551dc6"
+    },
+    {
+      "category": "feedback",
+      "url": "https://github.com/orgs/community/discussions/208625",
+      "status": 200,
+      "finalUrl": "https://github.com/orgs/community/discussions/208625",
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 296845,
+      "sha256": "51bdfd118092dfee1b356178e7975ccace1a8d18bc13b9b776a7dfa45b388369"
+    },
+    {
+      "category": "feedback",
+      "url": "https://github.com/orgs/community/discussions/202155",
+      "status": 200,
+      "finalUrl": "https://github.com/orgs/community/discussions/202155",
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 286125,
+      "sha256": "1d03426751c4ca08ebd308cb178dc89cfba4d6aeea1ca9cbce4b29687a87ec53"
+    },
+    {
+      "category": "feedback",
+      "url": "https://www.reddit.com/r/lovable/comments/1xknspm/does_anyone_else_burn_through_lovable_credits/",
+      "status": 200,
+      "finalUrl": "https://www.reddit.com/r/lovable/comments/1xknspm/does_anyone_else_burn_through_lovable_credits/",
+      "contentType": "text/html",
+      "bytesRead": 8470,
+      "sha256": "ce7a66da81ef3b9b544c54b75cf1c242da5312d6f91ab3eab81ceb785de4137d"
+    }
+  ]
+}

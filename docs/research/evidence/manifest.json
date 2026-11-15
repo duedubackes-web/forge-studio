@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "scope": "Four unauthenticated HTTP records; no body contents; phase timings are placeholders required by HAR, not observed measurements",
+  "artifacts": [
+    {
+      "file": "public-targets.har",
+      "sha256": "2c89a25eefb418160b1a62366a23eb0c03edf99fee65c1dec2b72498bed86497",
+      "bytes": 7009
+    },
+    {
+      "file": "rea-http-evidence.json",
+      "sha256": "f1932bb680ff982898ce84e358a4f7fca73621452f396b2256bdb920a93c0d6f",
+      "bytes": 14531
+    },
+    {
+      "file": "craft-http-evidence.json",
+      "sha256": "83e0e2c757250c4e78c4b586d98574b07b3500bf9d9c9aac9c305b98b56b16cb",
+      "bytes": 5383
+    }
+  ]
+}

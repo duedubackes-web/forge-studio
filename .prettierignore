@@ -4,3 +4,6 @@ node_modules
 package-lock.json
 playwright-report
 test-results
+
+# Preserve byte identities of research evidence.
+docs/research/evidence/

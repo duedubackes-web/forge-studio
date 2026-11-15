@@ -34,3 +34,13 @@ Os testes do produto não significam que o produto já testa aplicativos gerados
 - GitHub: tentativas de criação via GraphQL e REST retornaram falta de permissão da integração. Não houve repositório remoto criado por essas chamadas.
 
 O workflow foi preparado para Node 24 e 26; a execução local registrada aqui usou Node 24. Não alegamos execução local em Node 26.
+
+## Ampliação v0.2
+
+- `npm run check`: TypeScript e 12 testes de domínio/API passaram.
+- `PLAYWRIGHT_CHROMIUM_EXECUTABLE=/usr/bin/chromium npm run test:browser`: 3 testes passaram, incluindo download e verificação independente do backup.
+- REA 6.9.0 e Craft Anything 0.6.1: análise offline de 4 registros HTTP concluída. Uma primeira codificação com -1 nos campos obrigatórios de tempo foi rejeitada pelo REA; o HAR foi adaptado com placeholders documentados, sem alegar medição de fases.
+- Pesquisa ampliada: 27 URLs selecionadas, 26 respostas HTTP 200 e uma 404. Coleta não comprova testes dos produtos.
+- O histórico e a licença MIT do repositório criado pelo usuário foram preservados; o envio ao GitHub foi concluído. O bloqueio para criá-lo na v0.1 é histórico.
+- Nenhum teste autenticado de v0/Vercel/Codespaces, benchmark comparativo ou Codespace hospedado foi executado.
+- Configuração de dev container preparada; sua inicialização hospedada não foi testada.

@@ -22,8 +22,8 @@ def record(request, status, headers, data=b"", redirect=""):
         "startedDateTime": request.started, "time": elapsed,
         "request": {"method": "GET", "url": request.full_url, "httpVersion": "", "headers": [], "queryString": [], "cookies": [], "headersSize": -1, "bodySize": 0},
         "response": {"status": status, "statusText": "", "httpVersion": "", "headers": [{"name": k, "value": headers[k]} for k in ["Content-Type", "Cache-Control"] if headers.get(k)], "cookies": [], "content": {"size": len(data), "mimeType": headers.get("Content-Type", "application/octet-stream")}, "redirectURL": redirect, "headersSize": -1, "bodySize": -1},
-        "cache": {}, "timings": {"send": -1, "wait": -1, "receive": -1},
-        "_limitations": ["No browser scripts executed.", "Bodies, cookies and authentication headers omitted.", "HTTP version, transferred body size and timing breakdown not observed.", "time measures end-to-end urllib processing, not a browser performance benchmark.", "At most 2 MB read per final response; content.size is bytes read, not a complete transfer guarantee."],
+        "cache": {}, "timings": {"send": 0, "wait": elapsed, "receive": 0},
+        "_limitations": ["No browser scripts executed.", "Bodies, cookies and authentication headers omitted.", "HTTP version, transferred body size and timing breakdown not observed.", "HAR requires nonnegative send/wait/receive: total elapsed is assigned to wait and other fields are zero placeholders, not measured phase timings.", "time measures end-to-end urllib processing, not a browser performance benchmark.", "At most 2 MB read per final response; content.size is bytes read, not a complete transfer guarantee."],
     })
 
 class Recorder(urllib.request.HTTPRedirectHandler):

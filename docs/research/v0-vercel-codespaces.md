@@ -10,7 +10,7 @@ Data: 15 de novembro de 2026. Esta análise amplia a pesquisa do Lovable com doc
 | `https://vercel.com/ebb10`      | HTTP 404 nesta execução                                               | Não permite distinguir recurso inexistente de recurso inacessível ao visitante |
 | `https://github.com/codespaces` | HTTP 302 para login; página de login HTTP 200                         | Nenhum codespace de usuário foi aberto, criado, modificado ou excluído         |
 
-A captura tem quatro registros de requisições, incluindo o redirecionamento. Não é um HAR de sessão completa de navegador. Scripts não foram executados; corpos, cookies e cabeçalhos de autenticação não foram retidos. Versão HTTP, tamanho transferido e fases de tempo não medidos ficam desconhecidos. Os tempos registrados são do cliente urllib, não benchmarks de produto.
+A captura tem quatro registros de requisições, incluindo o redirecionamento. Não é um HAR de sessão completa de navegador. Scripts não foram executados; corpos, cookies e cabeçalhos de autenticação não foram retidos. Versão HTTP, tamanho transferido e fases de tempo não medidos ficam desconhecidos. Os tempos registrados são do cliente urllib, não benchmarks de produto. Para compatibilidade com campos obrigatórios do HAR, o total é colocado em `wait`, com `send` e `receive` em zero: são placeholders, não medições de fases de rede.
 
 ### Aplicação real das ferramentas
 
