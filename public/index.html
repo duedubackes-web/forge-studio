@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101313" />
+    <title>Forge Studio — Da ideia à evidência</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside>
+        <a class="brand" href="/" aria-label="Forge Studio início"
+          ><span class="mark">F</span>forge<span class="brand-light"
+            >studio</span
+          ></a
+        >
+        <div class="workspace">
+          <span class="avatar">FS</span>
+          <div>Meu workspace<small>Desenvolvimento local</small></div>
+        </div>
+        <p class="nav-label">WORKSPACE</p>
+        <button class="nav active" id="projects-nav">
+          <span>▦</span> Projetos</button
+        ><a
+          class="nav"
+          href="https://github.com/duedubackes-web/forge-studio"
+          target="_blank"
+          rel="noreferrer"
+          ><span>↗</span> Repositório</a
+        >
+        <div class="sidebar-note">
+          <span class="status-dot"></span> Protótipo local
+          <p>Planejamento e evidências.<br />IA ainda não conectada.</p>
+        </div>
+        <div class="profile">
+          <span class="avatar">D</span>
+          <div>Workspace pessoal<small>Forge Studio · v0.1</small></div>
+        </div>
+      </aside>
+      <main>
+        <header>
+          <div>
+            <span class="muted">Workspace</span><span class="slash">/</span
+            ><span id="breadcrumb">Projetos</span>
+          </div>
+          <span class="local-badge"
+            ><span class="status-dot"></span> Ambiente local</span
+          >
+        </header>
+        <div id="notice" role="status" aria-live="polite" hidden></div>
+        <section id="home">
+          <div class="eyebrow">IDEIAS QUE VIRAM SOFTWARE CONFIÁVEL</div>
+          <div class="intro">
+            <div>
+              <h1>
+                Construa com direção.<br /><span>Avance com evidências.</span>
+              </h1>
+              <p>
+                Organize o próximo produto, defina o que precisa funcionar<br
+                  class="desktop"
+                />
+                e acompanhe cada decisão em um só lugar.
+              </p>
+            </div>
+            <span class="edition">FORGE / 001</span>
+          </div>
+          <div class="composer">
+            <div class="composer-top">
+              <span class="spark">✳</span>
+              <h2>Qual é o próximo projeto?</h2>
+              <span class="tag">Planejamento local</span>
+            </div>
+            <form id="create-project">
+              <label for="project-name">Nome do projeto</label
+              ><input
+                id="project-name"
+                name="name"
+                placeholder="Ex.: Portal de clientes"
+                minlength="2"
+                maxlength="80"
+                required
+              /><label for="project-description"
+                >O que você quer construir?</label
+              ><textarea
+                id="project-description"
+                name="description"
+                placeholder="Descreva o objetivo, quem vai usar e o problema que precisa resolver…"
+                maxlength="2000"
+                rows="3"
+              ></textarea>
+              <div class="composer-footer">
+                <span>Seu projeto começa com um plano claro.</span
+                ><button class="primary" type="submit">
+                  Criar projeto <span>↗</span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="principles">
+            <div>
+              <span>01</span><strong>Defina a intenção</strong>
+              <p>Objetivos e critérios antes do código.</p>
+            </div>
+            <div>
+              <span>02</span><strong>Trabalhe com limites</strong>
+              <p>Orçamento explícito para cada tarefa.</p>
+            </div>
+            <div>
+              <span>03</span><strong>Registre a prova</strong>
+              <p>Decisões rastreáveis, revisão consciente.</p>
+            </div>
+          </div>
+          <div class="section-title">
+            <h2>Seus projetos <span id="project-count">0</span></h2>
+            <span>Do conceito à revisão</span>
+          </div>
+          <div id="project-list" class="project-grid"></div>
+        </section>
+        <section id="project-view" hidden>
+          <button id="back" class="back">← Todos os projetos</button>
+          <div class="eyebrow">SEU ESPAÇO DE CONSTRUÇÃO</div>
+          <h1 id="detail-name"></h1>
+          <p class="muted" id="detail-description"></p>
+          <div class="detail-grid">
+            <div>
+              <div class="panel">
+                <h2>Planejar uma mudança</h2>
+                <p class="muted">Descreva uma entrega pequena e verificável.</p>
+                <form id="create-run">
+                  <label for="run-prompt">Objetivo da tarefa</label
+                  ><textarea
+                    id="run-prompt"
+                    minlength="12"
+                    maxlength="6000"
+                    rows="5"
+                    placeholder="Criar um painel com login, cadastro e relatórios…"
+                    required
+                  ></textarea
+                  ><label for="budget">Limite para a tarefa (R$)</label
+                  ><input
+                    id="budget"
+                    type="number"
+                    min="0"
+                    max="10000"
+                    step="0.01"
+                    value="10.00"
+                    required
+                  />
+                  <p class="hint">
+                    Limite configurado para integração futura. Este planejador
+                    não realiza cobranças.
+                  </p>
+                  <button class="primary" type="submit">
+                    Gerar plano local ↗
+                  </button>
+                </form>
+              </div>
+              <div class="honesty">
+                <strong>Como este protótipo funciona</strong>
+                <p>
+                  O plano usa regras locais por palavras-chave. Não gera código
+                  e não executa testes. A integração com o agente é uma etapa
+                  futura.
+                </p>
+              </div>
+            </div>
+            <div id="run-list"></div>
+          </div>
+        </section>
+        <footer>
+          <span>FORGE STUDIO</span><span>Da intenção à evidência.</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

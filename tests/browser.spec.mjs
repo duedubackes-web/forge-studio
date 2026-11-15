@@ -1,0 +1,95 @@
+import { test, expect } from "@playwright/test";
+test("create project, plan, record evidence, reload and reopen on mobile", async ({
+  page,
+}) => {
+  const errors = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto("/");
+  await page
+    .getByLabel("Nome do projeto", { exact: true })
+    .fill("Portal de clientes — teste");
+  await page
+    .getByLabel("O que você quer construir?")
+    .fill("Portal original para acompanhar pedidos de clientes.");
+  await page.getByRole("button", { name: "Criar projeto" }).click();
+  await expect(page.locator("#detail-name")).toHaveText(
+    "Portal de clientes — teste",
+  );
+  await page
+    .getByLabel("Objetivo da tarefa")
+    .fill("Criar login, cadastro de dados e painel com relatórios.");
+  await page.getByLabel("Limite para a tarefa (R$)").fill("25.50");
+  await page.getByRole("button", { name: "Gerar plano local" }).click();
+  await expect(
+    page.getByText("Aguardando evidências", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/Plano determinístico por palavras-chave/),
+  ).toBeVisible();
+  for (const gate of ["functional", "visual", "data-isolation"]) {
+    await page.getByLabel("Critério", { exact: true }).selectOption(gate);
+    await page
+      .getByLabel("Registro da verificação")
+      .fill(`Registro manual de teste isolado para o critério ${gate}.`);
+    await page.getByRole("button", { name: "Adicionar evidência" }).click();
+    await expect(
+      page.locator(".evidence-item").filter({
+        hasText: `Registro manual de teste isolado para o critério ${gate}.`,
+      }),
+    ).toBeVisible();
+  }
+  await expect(
+    page.getByText("Pronto para revisão humana", { exact: true }),
+  ).toBeVisible();
+  await page.getByLabel("Critério", { exact: true }).selectOption("functional");
+  await page.getByLabel("Resultado declarado").selectOption("fail");
+  await page
+    .getByLabel("Registro da verificação")
+    .fill("Uma regressão foi observada na última revisão manual.");
+  await page.getByRole("button", { name: "Adicionar evidência" }).click();
+  await expect(
+    page.getByText("Aguardando evidências", { exact: true }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Todos os projetos" }).click();
+  await page.reload();
+  await page
+    .getByRole("button", { name: /Portal de clientes — teste/ })
+    .click();
+  await expect(
+    page.locator(".evidence-item").filter({
+      hasText: "Uma regressão foi observada na última revisão manual.",
+    }),
+  ).toBeVisible();
+  await page.screenshot({
+    path: "test-results/studio-desktop.png",
+    fullPage: true,
+  });
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
+  await page.getByRole("button", { name: "Todos os projetos" }).click();
+  await expect(
+    page.getByRole("button", { name: /Portal de clientes — teste/ }),
+  ).toBeVisible();
+  await page.screenshot({
+    path: "test-results/studio-mobile.png",
+    fullPage: true,
+  });
+  expect(errors).toEqual([]);
+});
+test("project names render as text rather than executable markup", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page
+    .getByLabel("Nome do projeto", { exact: true })
+    .fill("<img src=x onerror=alert(1)>");
+  await page.getByRole("button", { name: "Criar projeto" }).click();
+  await expect(page.locator("#detail-name")).toHaveText(
+    "<img src=x onerror=alert(1)>",
+  );
+  expect(await page.locator("#detail-name img").count()).toBe(0);
+});
