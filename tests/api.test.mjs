@@ -144,6 +144,7 @@ test("export API preserves project history and provides verifiable download", as
   const { verifyExport } = await import("../src/backup.mjs");
   assert.equal(verifyExport(backup).runs, 1);
   assert.equal(backup.payload.project.name, "Backup original");
+  assert.equal(Object.hasOwn(backup.payload.project.runs[0], "review"), false);
   assert.equal(
     (
       await f.request(

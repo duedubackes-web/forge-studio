@@ -165,6 +165,8 @@ export function exportProject(project) {
     exportedAt: new Date().toISOString(),
     project: structuredClone(project),
   };
+  // Derived review fields are recomputed on restore, not serialized as authority.
+  for (const run of payload.project.runs) delete run.review;
   validatePayload(payload);
   return {
     payload,
