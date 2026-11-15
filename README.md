@@ -1,6 +1,6 @@
 # Forge Studio
 
-Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.4.0.**
+Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.5.0.**
 
 Esta primeira entrega contém um Studio funcional de planejamento e registro de evidências, uma base de agente eve e pesquisa competitiva rastreável. **Ainda não é um gerador de aplicativos equivalente ao Lovable.**
 
@@ -80,7 +80,13 @@ Os testes de navegador iniciam um servidor próprio e usam dados temporários se
 
 ## Backup portável
 
-Abra um projeto e use **Exportar backup do projeto**. O JSON inclui planos e evidências, com checksum SHA-256. Valide com `npm run backup:verify -- arquivo.json`. O checksum verifica integridade, não autenticidade. Na página de projetos, abra **Restaurar um projeto de backup**, selecione um JSON de até 2 MiB e restaure como nova cópia. O original é preservado e todas as evidências importadas exigem nova revisão. Somente o formato 1 é aceito; não há migração automática de versões futuras. Guarde o arquivo fora do runtime e em local privado. Importações usam identidades novas para evitar colisões entre projetos, execuções e evidências.
+Abra um projeto e use **Exportar backup do projeto**. O JSON inclui planos e evidências, com checksum SHA-256. Valide com `npm run backup:verify -- arquivo.json`. O checksum verifica integridade, não autenticidade. Na página de projetos, abra **Restaurar um projeto de backup**, selecione um JSON de até 2 MiB e restaure como nova cópia. O original é preservado e todas as evidências importadas exigem nova revisão. São aceitos os formatos 1 e 2; não há migração automática de versões futuras. Backups com histórico de aceite usam formato 2 e exigem Forge v0.5 ou posterior. Guarde o arquivo fora do runtime e em local privado. Importações usam identidades novas para evitar colisões entre projetos, execuções e evidências.
+
+## Aceite manual de revisão
+
+Após registrar aprovação manual para os três critérios, use **Aceitar revisão**. O aceite registra especificação, evidências e data. Nova evidência exige novo aceite; uma falha volta a bloquear a revisão. Repetir a mesma solicitação não duplica o registro. Na recuperação de backup, aceites antigos ficam no histórico importado e não aprovam a cópia.
+
+Esse fluxo é local e de usuário único: não comprova execução automatizada de testes, identidade multiusuário ou publicação de um aplicativo.
 
 ## Inspecionar a base Git
 

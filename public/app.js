@@ -123,7 +123,11 @@ function renderRuns() {
       el(
         "span",
         { className: `review-badge${ready ? " ready" : ""}` },
-        ready ? "Pronto para revisão humana" : "Aguardando evidências",
+        run.review.accepted
+          ? "Revisão aceita"
+          : ready
+            ? "Pronto para revisão humana"
+            : "Aguardando evidências",
       ),
       el("h3", {}, run.plan.prompt),
       el("p", { className: "disclosure" }, run.plan.disclosure),
@@ -222,6 +226,42 @@ function renderRuns() {
         await openProject(state.project.id);
       });
     });
+    if (ready && !run.review.accepted) {
+      const acceptButton = el(
+        "button",
+        { type: "button", className: "primary" },
+        "Aceitar revisão",
+      );
+      acceptButton.addEventListener("click", async () => {
+        acceptButton.disabled = true;
+        try {
+          await api(`/api/projects/${state.project.id}/runs/${run.id}/accept`, {
+            expectedSpecHash: run.specHash,
+            expectedCheckIds: run.review.currentCheckIds,
+          });
+          await openProject(state.project.id);
+        } catch (error) {
+          notify(error.message);
+          acceptButton.disabled = false;
+        }
+      });
+      card.append(
+        el(
+          "p",
+          { className: "hint" },
+          "O aceite registra sua revisão manual. Não executa testes nem publica o aplicativo.",
+        ),
+        acceptButton,
+      );
+    }
+    if (run.review.accepted)
+      card.append(
+        el(
+          "p",
+          { className: "hint" },
+          `Aceite manual registrado em ${new Date(run.review.acceptedAt).toLocaleString("pt-BR")}.`,
+        ),
+      );
     card.append(form);
     for (const check of [...run.checks].reverse())
       card.append(

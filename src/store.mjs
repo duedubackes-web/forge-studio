@@ -8,6 +8,7 @@ import {
   reviewStatus,
 } from "./domain.mjs";
 import { restoreProject } from "./backup.mjs";
+import { z } from "zod";
 export class Store {
   constructor(path) {
     this.path = path;
@@ -68,6 +69,50 @@ export class Store {
     const r = createRun(id, input);
     this.save({ ...this.state, runs: [...this.state.runs, r] });
     return { ...structuredClone(r), review: reviewStatus(r) };
+  }
+  accept(projectId, runId, input) {
+    const request = z
+      .object({
+        expectedSpecHash: z.string().regex(/^[a-f0-9]{64}$/),
+        expectedCheckIds: z.array(z.uuid()).length(3),
+      })
+      .strict()
+      .parse(input);
+    const run = this.state.runs.find(
+      (r) => r.id === runId && r.projectId === projectId,
+    );
+    if (!run) return null;
+    const review = reviewStatus(run);
+    if (
+      review.missing.length ||
+      request.expectedSpecHash !== run.specHash ||
+      !request.expectedCheckIds.every(
+        (id, i) => id === review.currentCheckIds[i],
+      )
+    )
+      throw Object.assign(
+        Error(
+          "A revisão mudou ou tem critérios pendentes. Atualize o projeto antes de aceitar.",
+        ),
+        { status: 409 },
+      );
+    if (review.accepted) return { ...structuredClone(run), review };
+    const acceptance = {
+      id: randomUUID(),
+      createdAt: new Date().toISOString(),
+      source: "operator-declared",
+      specHash: run.specHash,
+      checkIds: review.currentCheckIds,
+    };
+    const next = {
+      ...run,
+      acceptances: [...(run.acceptances ?? []), acceptance],
+    };
+    this.save({
+      ...this.state,
+      runs: this.state.runs.map((r) => (r.id === runId ? next : r)),
+    });
+    return { ...structuredClone(next), review: reviewStatus(next) };
   }
   addCheck(projectId, runId, input) {
     const r = this.state.runs.find(

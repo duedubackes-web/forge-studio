@@ -132,7 +132,22 @@ export function reviewStatus(run) {
       );
     })
     .map((g) => g.id);
+  const checkIds = gates.map((g) => latest.get(g.id)?.id ?? null);
+  const acceptance = missing.length
+    ? undefined
+    : [...(run.acceptances ?? [])]
+        .reverse()
+        .find(
+          (a) =>
+            a.source === "operator-declared" &&
+            a.specHash === run.specHash &&
+            a.checkIds.length === checkIds.length &&
+            a.checkIds.every((id, i) => id === checkIds[i]),
+        );
   return {
+    accepted: Boolean(acceptance),
+    acceptedAt: acceptance?.createdAt ?? null,
+    currentCheckIds: checkIds,
     status: missing.length ? "needs-evidence" : "ready-for-human-review",
     missing,
     assurance:

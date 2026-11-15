@@ -51,3 +51,11 @@ Craft Anything e REA são candidatos a adaptadores opcionais de investigação d
 Cada recuperação cria novos UUIDs para projeto, execuções e evidências. O histórico preserva referências de origem e o digest do backup. IDs existentes nunca são sobrescritos. Os registros recebem `imported-operator-declared`; o status de revisão é recalculado, sem confiar no status armazenado no arquivo. Só uma declaração manual atual, vinculada à especificação correta, satisfaz um critério. A recuperação não executa código ou testes, não publica aplicativos e não autentica os resultados históricos.
 
 A escrita ocorre uma vez, após validação completa, usando o mecanismo existente de arquivo temporário e rename. Permanecem os limites do armazenamento local de processo único. Formatos futuros são recusados explicitamente; não há migração automática.
+
+## Aceite v0.5
+
+O endpoint `POST /api/projects/:projectId/runs/:runId/accept` compara `expectedSpecHash` e `expectedCheckIds` com o estado atual. Critério pendente ou revisão desatualizada recebe 409. Cada aceite registra ID, data e os IDs exatos de evidências; repetir um aceite atual devolve o mesmo registro.
+
+`review.accepted` só fica verdadeiro enquanto o conjunto atual coincide com um aceite local válido. Alterações preservam o histórico, mas invalidam o aceite vigente. A importação remapeia IDs e marca registros como importados, sem conferir aprovação atual. O formato 2 de backup inclui aceites; o formato 1 continua suportado para projetos anteriores.
+
+O operador é o usuário do protótipo local; não há autenticação multiusuário nem autorização de publicação. Aceite manual não é resultado de teste automatizado.

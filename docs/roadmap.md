@@ -61,3 +61,7 @@ REA e Craft Anything aplicados a três páginas oficiais, com evidências e hash
 - F23 — P1: memória com origem por fonte; revogar acesso e apagar memória como controles separados.
 
 Nenhum desses recursos é anunciado como pronto.
+
+## Ampliação v0.5
+
+F21 parcial: aceite manual vinculado à especificação e às evidências entregue. Aceite é idempotente; nova evidência ou importação exige reavaliação. A biblioteca de entregáveis e execução real por agente continuam pendentes. F17 passa a reconhecer backups 1 e 2; versões desconhecidas continuam recusadas.

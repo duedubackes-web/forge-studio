@@ -17,7 +17,7 @@ test("portable export roundtrips through JSON and detects content changed after 
 });
 test("unsupported format and malformed exports are rejected", () => {
   const backup = exportProject(project);
-  backup.payload.formatVersion = 2;
+  backup.payload.formatVersion = 99;
   assert.throws(() => verifyExport(backup));
   for (const x of [null, {}, { integrity: { algorithm: "md5" } }])
     assert.throws(() => verifyExport(x));

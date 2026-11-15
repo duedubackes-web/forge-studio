@@ -41,6 +41,10 @@ test("create project, plan, record evidence, reload and reopen on mobile", async
   await expect(
     page.getByText("Pronto para revisão humana", { exact: true }),
   ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Aceitar revisão", exact: true })
+    .click();
+  await expect(page.getByText("Revisão aceita", { exact: true })).toBeVisible();
   await page.getByLabel("Critério", { exact: true }).selectOption("functional");
   await page.getByLabel("Resultado declarado").selectOption("fail");
   await page

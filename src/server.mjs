@@ -111,6 +111,21 @@ export function createApp({ dataPath }) {
           result ?? { error: "Projeto não encontrado." },
         );
       }
+      const acceptance = path.match(
+        /^\/api\/projects\/([a-f0-9-]+)\/runs\/([a-f0-9-]+)\/accept$/,
+      );
+      if (acceptance && req.method === "POST") {
+        const result = store.accept(
+          acceptance[1],
+          acceptance[2],
+          await body(req),
+        );
+        return send(
+          res,
+          result ? 200 : 404,
+          result ?? { error: "Execução não encontrada neste projeto." },
+        );
+      }
       const checks = path.match(
         /^\/api\/projects\/([a-f0-9-]+)\/runs\/([a-f0-9-]+)\/checks$/,
       );

@@ -235,7 +235,7 @@ test("malformed, tampered and semantically inconsistent backups never modify per
   const tampered = structuredClone(backup);
   tampered.payload.project.name = "Conteúdo alterado";
   const wrongVersion = structuredClone(backup);
-  wrongVersion.payload.formatVersion = 2;
+  wrongVersion.payload.formatVersion = 99;
   const foreignRun = structuredClone(backup);
   foreignRun.payload.project.runs[0].projectId =
     "00000000-0000-4000-8000-000000000000";
@@ -258,4 +258,82 @@ test("malformed, tampered and semantically inconsistent backups never modify per
     );
     assert.equal(await readFile(f.dataPath, "utf8"), before);
   }
+});
+
+test("manual acceptance binds current evidence, is idempotent and never survives import as approval", async (t) => {
+  const f = await fixture(t);
+  const project = (
+    await f.request("/api/projects", { name: "Aceite rastreável" })
+  ).body;
+  const path = `/api/projects/${project.id}`;
+  let run = (
+    await f.request(path + "/runs", {
+      prompt: "Portal de clientes com dados e login.",
+      budgetCents: 100,
+    })
+  ).body;
+  const endpoint = `${path}/runs/${run.id}/accept`;
+  assert.equal(
+    (
+      await f.request(endpoint, {
+        expectedSpecHash: run.specHash,
+        expectedCheckIds: Array(3).fill("00000000-0000-4000-8000-000000000000"),
+      })
+    ).status,
+    409,
+  );
+  for (const gate of ["functional", "visual", "data-isolation"])
+    run = (
+      await f.request(`${path}/runs/${run.id}/checks`, {
+        gate,
+        outcome: "pass",
+        evidence: "Critério conferido manualmente nesta especificação.",
+      })
+    ).body;
+  const request = {
+    expectedSpecHash: run.specHash,
+    expectedCheckIds: run.review.currentCheckIds,
+  };
+  const first = await f.request(endpoint, request);
+  assert.equal(first.status, 200);
+  assert.equal(first.body.review.accepted, true);
+  assert.equal(first.body.acceptances.length, 1);
+  const retry = await f.request(endpoint, request);
+  assert.equal(retry.body.acceptances.length, 1);
+  assert.equal(retry.body.acceptances[0].id, first.body.acceptances[0].id);
+  assert.equal(
+    new Store(f.dataPath).project(project.id).runs[0].review.accepted,
+    true,
+  );
+  const backup = (await f.request(path + "/export")).body;
+  assert.equal(backup.payload.formatVersion, 2);
+  const restored = await f.request("/api/projects/import", backup);
+  assert.equal(restored.status, 201);
+  assert.equal(restored.body.runs[0].review.accepted, false);
+  assert.equal(
+    restored.body.runs[0].acceptances[0].source,
+    "imported-operator-declared",
+  );
+  run = (
+    await f.request(`${path}/runs/${run.id}/checks`, {
+      gate: "functional",
+      outcome: "pass",
+      evidence: "Nova conferência altera a versão do conjunto de evidências.",
+    })
+  ).body;
+  assert.equal(run.review.accepted, false);
+  assert.equal((await f.request(endpoint, request)).status, 409);
+  const renewed = await f.request(endpoint, {
+    expectedSpecHash: run.specHash,
+    expectedCheckIds: run.review.currentCheckIds,
+  });
+  assert.equal(renewed.body.acceptances.length, 2);
+  assert.equal(renewed.body.review.accepted, true);
+  const failed = await f.request(`${path}/runs/${run.id}/checks`, {
+    gate: "visual",
+    outcome: "fail",
+    evidence: "Uma regressão foi observada depois do aceite manual.",
+  });
+  assert.equal(failed.body.review.accepted, false);
+  assert.equal(failed.body.review.status, "needs-evidence");
 });
