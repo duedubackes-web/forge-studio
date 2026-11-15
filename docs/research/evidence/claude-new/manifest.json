@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-15T11:32:36.717189+00:00",
+  "target": "https://claude.ai/new",
+  "authenticatedSessionObserved": false,
+  "scope": "Unauthenticated HTTP metadata only; no scripts executed; no response bodies, credentials or cookies retained",
+  "tools": {
+    "rea": "6.9.0",
+    "craftAnything": "0.6.1"
+  },
+  "responseStatuses": [
+    200
+  ],
+  "artifacts": [
+    {
+      "file": "public-http.har",
+      "bytes": 1818,
+      "sha256": "0841954e7c62ebb0557ef157b787c7b118c49113948d29108976eebf303f3cf9"
+    },
+    {
+      "file": "rea.json",
+      "bytes": 7154,
+      "sha256": "fb49f4e153edc6b11bdd92d3ee37f71fd39d50994d402ec022635c532c6b4a5d"
+    },
+    {
+      "file": "craft.json",
+      "bytes": 2383,
+      "sha256": "4fc31565e81a803c9d4f30ef751b4d5d5d2d44e9f04a436d60209db5218082dd"
+    }
+  ]
+}
