@@ -93,3 +93,21 @@ test("project names render as text rather than executable markup", async ({
   );
   expect(await page.locator("#detail-name img").count()).toBe(0);
 });
+
+test("project backup can be downloaded and verified independently", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page
+    .getByLabel("Nome do projeto", { exact: true })
+    .fill("Projeto exportável");
+  await page.getByRole("button", { name: "Criar projeto" }).click();
+  const downloadEvent = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Exportar backup do projeto" }).click();
+  const download = await downloadEvent;
+  const { readFile } = await import("node:fs/promises");
+  const { verifyExport } = await import("../src/backup.mjs");
+  const backup = JSON.parse(await readFile(await download.path(), "utf8"));
+  expect(verifyExport(backup).valid).toBe(true);
+  expect(backup.payload.project.name).toBe("Projeto exportável");
+});

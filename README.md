@@ -1,6 +1,6 @@
 # Forge Studio
 
-Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.1.0.**
+Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.2.0.**
 
 Esta primeira entrega contém um Studio funcional de planejamento e registro de evidências, uma base de agente eve e pesquisa competitiva rastreável. **Ainda não é um gerador de aplicativos equivalente ao Lovable.**
 
@@ -77,8 +77,14 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE=/usr/bin/chromium npm run test:browser
 
 Os testes de navegador iniciam um servidor próprio e usam dados temporários separados. Confira [o registro de verificação](docs/verification.md) para os comandos efetivamente executados nesta entrega e seus limites.
 
+## Backup portável
+
+Abra um projeto e use **Exportar backup do projeto**. O JSON inclui planos e evidências, com checksum SHA-256. Valide com `npm run backup:verify -- arquivo.json`. O checksum verifica integridade, não autenticidade. A importação/restauração automática ainda não está implementada. Guarde o arquivo fora do runtime e em local privado.
+
 ## Pesquisa e implementação
 
+- [v0, Vercel, Codespaces e relatos públicos](docs/research/v0-vercel-codespaces.md)
+- [Ambiente reproduzível](docs/development-environment.md)
 - [Análise competitiva e oportunidades](docs/research/competitive-analysis.md)
 - [Catálogo das 342 páginas públicas](docs/research/source-manifest.json)
 - [Arquitetura e fronteiras atuais](docs/architecture.md)
@@ -88,4 +94,4 @@ Os testes de navegador iniciam um servidor próprio e usam dados temporários se
 
 A pesquisa usa documentação pública e leitura autorizada; não recupera o código privado, os prompts internos ou os modelos do Lovable. Não incorporamos código, marcas, imagens ou textos de interface do Lovable, Craft Anything ou REA. As referências são fontes de análise e ferramentas avaliadas, não dependências integradas do produto.
 
-Código proprietário inicial, sem concessão de licença de redistribuição. Dependências mantêm suas licenças. Nenhuma hospedagem ou serviço pago foi provisionado por esta entrega.
+Licença MIT, conforme o arquivo LICENSE criado pelo proprietário do repositório. Dependências mantêm suas licenças. Nenhuma hospedagem ou serviço pago foi provisionado por esta entrega.

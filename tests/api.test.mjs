@@ -128,3 +128,28 @@ test("corrupted persistence fails visibly instead of resetting user data", async
   assert.throws(() => new Store(path));
   assert.equal(await readFile(path, "utf8"), "{broken");
 });
+
+test("export API preserves project history and provides verifiable download", async (t) => {
+  const f = await fixture(t);
+  const p = await f.request("/api/projects", { name: "Backup original" });
+  const path = `/api/projects/${p.body.id}`;
+  await f.request(path + "/runs", {
+    prompt: "Criar um portal com login e painel.",
+    budgetCents: 500,
+  });
+  const response = await fetch(f.base + path + "/export");
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-disposition"), /^attachment;/);
+  const backup = await response.json();
+  const { verifyExport } = await import("../src/backup.mjs");
+  assert.equal(verifyExport(backup).runs, 1);
+  assert.equal(backup.payload.project.name, "Backup original");
+  assert.equal(
+    (
+      await f.request(
+        "/api/projects/00000000-0000-4000-8000-000000000000/export",
+      )
+    ).status,
+    404,
+  );
+});

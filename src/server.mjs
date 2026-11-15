@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
 import { ZodError } from "zod";
 import { Store } from "./store.mjs";
+import { exportProject } from "./backup.mjs";
 const publicDir = fileURLToPath(new URL("../public/", import.meta.url));
 const assets = new Map([
   ["/", ["index.html", "text/html; charset=utf-8"]],
@@ -68,6 +69,17 @@ export function createApp({ dataPath }) {
         if (req.method === "GET") return send(res, 200, store.list());
         if (req.method === "POST")
           return send(res, 201, store.addProject(await body(req)));
+      }
+      const backup = path.match(/^\/api\/projects\/([a-f0-9-]+)\/export$/);
+      if (backup && req.method === "GET") {
+        const project = store.project(backup[1]);
+        if (!project)
+          return send(res, 404, { error: "Projeto não encontrado." });
+        res.setHeader(
+          "Content-Disposition",
+          `attachment; filename="forge-project-${project.id}.json"`,
+        );
+        return send(res, 200, exportProject(project));
       }
       const project = path.match(/^\/api\/projects\/([a-f0-9-]+)$/);
       if (project && req.method === "GET") {

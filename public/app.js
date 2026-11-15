@@ -98,6 +98,7 @@ async function openProject(id) {
   $("#project-view").hidden = false;
   $("#breadcrumb").textContent = state.project.name;
   $("#detail-name").textContent = state.project.name;
+  $("#export-project").href = `/api/projects/${state.project.id}/export`;
   $("#detail-description").textContent = state.project.description;
   renderRuns();
 }

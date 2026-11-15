@@ -1,6 +1,6 @@
 {
   "name": "forge-studio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "imports": {
     "#*": "./agent/*",
@@ -16,7 +16,8 @@
     "agent:build": "eve build",
     "test:browser": "playwright test",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "backup:verify": "node scripts/verify-backup.mjs"
   },
   "dependencies": {
     "@vercel/connect": "2.7.0",
@@ -35,5 +36,5 @@
   },
   "private": true,
   "description": "Original application-building platform foundation: local project planning, evidence and review.",
-  "license": "UNLICENSED"
+  "license": "MIT"
 }
