@@ -43,3 +43,11 @@ Em produção, essas operações precisam de transação/concorrência no banco 
 ## Reuso das ferramentas investigadas
 
 Craft Anything e REA são candidatos a adaptadores opcionais de investigação de artefatos autorizados. Ainda não são executados pelo produto. Antes de integrar: fixar versão, revisar licenças de distribuição, declarar efeitos, limitar recursos, preservar proveniência e testar contra um artefato próprio. Saídas serão dados não confiáveis, não instruções para o agente.
+
+## Recuperação v0.3
+
+`POST /api/projects/import` aceita JSON de até 2 MiB, com o mesmo controle de Host/Origin do Studio. A validação estrutural precede a gravação: formato 1, campos de plano/evidência, hash externo do backup, hash da especificação por execução, pertencimento ao projeto e identidades sem duplicação. Checksum não é assinatura de autoria.
+
+Cada recuperação cria novos UUIDs para projeto, execuções e evidências. O histórico preserva referências de origem e o digest do backup. IDs existentes nunca são sobrescritos. Os registros recebem `imported-operator-declared`; o status de revisão é recalculado, sem confiar no status armazenado no arquivo. Só uma declaração manual atual, vinculada à especificação correta, satisfaz um critério. A recuperação não executa código ou testes, não publica aplicativos e não autentica os resultados históricos.
+
+A escrita ocorre uma vez, após validação completa, usando o mecanismo existente de arquivo temporário e rename. Permanecem os limites do armazenamento local de processo único. Formatos futuros são recusados explicitamente; não há migração automática.

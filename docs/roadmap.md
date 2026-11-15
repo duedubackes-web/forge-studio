@@ -1,6 +1,6 @@
 # Roadmap
 
-Legenda: entregue = funciona na base atual; planejado = falta implementação e comprovação.
+Legenda: entregue = funciona na base atual; parcial = parte funciona e o restante está explícito; planejado = falta implementação e comprovação.
 
 | ID  | Prioridade | Estado    | Entrega                              | Aceitação                                                                             |
 | --- | ---------- | --------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
@@ -33,9 +33,15 @@ Medir custo por mudança aceita, tempo até entrega verificável, taxa de regres
 | ID  | Prioridade | Estado    | Entrega                          | Aceitação                                                                                                   |
 | --- | ---------- | --------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | F16 | P0         | Entregue  | Exportação verificável           | Download contém projeto e histórico; alteração de conteúdo falha no verificador                             |
-| F17 | P0         | Planejado | Restauração e migração de backup | Importar sem executar conteúdo; detectar versão inválida e colisões; preservar origem manual das evidências |
+| F17 | P0         | Parcial   | Restauração e migração de backup | Importar sem executar conteúdo; detectar versão inválida e colisões; preservar origem manual das evidências |
 | F18 | P0         | Planejado | Preflight e parada sem progresso | Runtime pronto antes de chamada paga; tentativas limitadas e motivo visível                                 |
 | F19 | P1         | Planejado | Checkpoint fora do runtime       | Recuperar trabalho após indisponibilidade/exclusão do ambiente de execução                                  |
 | F20 | P1         | Planejado | Custos discriminados             | Separar modelo, build, execução e hospedagem com reconciliação por operação                                 |
 
 Dev container adicionado para configurar o desenvolvimento. A criação real em Codespaces e o acesso remoto autenticado não foram verificados. Fontes e ressalvas: [pesquisa ampliada](research/v0-vercel-codespaces.md).
+
+## Ampliação v0.3
+
+F17: recuperação do formato 1 entregue na interface e API. Cria nova cópia, rejeita backups inconsistentes e exige nova revisão das evidências importadas. Migração entre versões de formato ainda não implementada.
+
+Acesso Vercel autenticado verificado em leitura; isso não implica acesso ao código da plataforma nem acesso à sessão do v0 no navegador. A inspeção visual autenticada do v0 permanece não verificada por ausência da ferramenta de navegador nesta sessão.

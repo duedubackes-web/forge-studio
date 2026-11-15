@@ -664,3 +664,15 @@ footer span:last-child {
     font-size: 8px;
   }
 }
+
+.restore-panel {
+  margin-top: 24px;
+}
+.restore-panel summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+.restore-panel .primary {
+  margin-top: 14px;
+}

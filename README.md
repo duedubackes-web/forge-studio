@@ -1,6 +1,6 @@
 # Forge Studio
 
-Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.2.0.**
+Plataforma original para transformar objetivos em software com critérios de aceitação e evidências de verificação. **Nome provisório; protótipo local v0.3.0.**
 
 Esta primeira entrega contém um Studio funcional de planejamento e registro de evidências, uma base de agente eve e pesquisa competitiva rastreável. **Ainda não é um gerador de aplicativos equivalente ao Lovable.**
 
@@ -30,6 +30,7 @@ Os dados são gravados em `.data/store.json` (ignorado no Git). Use `FORGE_DATA_
 - Planos locais com sugestões de módulos e critérios de aceitação.
 - Identidade SHA-256 da especificação associada a cada registro de evidência.
 - Histórico de evidências e critérios para revisão humana.
+- Exportação e recuperação de backups do formato 1, em nova cópia sem sobrescrever projetos.
 - Núcleo de reserva e liquidação de orçamento com testes de idempotência e gastos concorrentes lógicos.
 - Agente eve separado com ferramenta tipada de avaliação de requisitos.
 
@@ -79,7 +80,7 @@ Os testes de navegador iniciam um servidor próprio e usam dados temporários se
 
 ## Backup portável
 
-Abra um projeto e use **Exportar backup do projeto**. O JSON inclui planos e evidências, com checksum SHA-256. Valide com `npm run backup:verify -- arquivo.json`. O checksum verifica integridade, não autenticidade. A importação/restauração automática ainda não está implementada. Guarde o arquivo fora do runtime e em local privado.
+Abra um projeto e use **Exportar backup do projeto**. O JSON inclui planos e evidências, com checksum SHA-256. Valide com `npm run backup:verify -- arquivo.json`. O checksum verifica integridade, não autenticidade. Na página de projetos, abra **Restaurar um projeto de backup**, selecione um JSON de até 2 MiB e restaure como nova cópia. O original é preservado e todas as evidências importadas exigem nova revisão. Somente o formato 1 é aceito; não há migração automática de versões futuras. Guarde o arquivo fora do runtime e em local privado. Importações usam identidades novas para evitar colisões entre projetos, execuções e evidências.
 
 ## Pesquisa e implementação
 

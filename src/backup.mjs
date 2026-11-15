@@ -1,28 +1,142 @@
-import { createHash } from "node:crypto";
+import { createHash, randomUUID } from "node:crypto";
 import { z } from "zod";
-const payloadSchema = z
+import { projectInput, runInput, checkInput, gates } from "./domain.mjs";
+const hash = z.string().regex(/^[a-f0-9]{64}$/);
+const nonnegative = z.number().int().nonnegative();
+const originSchema = z
+  .object({
+    backupDigest: hash,
+    projectId: z.uuid(),
+    importedAt: z.iso.datetime(),
+  })
+  .strict();
+const planSchema = z
+  .object({
+    engine: z.literal("local-rules-v1"),
+    disclosure: z.string().max(2000),
+    prompt: runInput.shape.prompt,
+    budgetCents: runInput.shape.budgetCents,
+    currency: z.literal("BRL"),
+    features: z
+      .array(
+        z
+          .object({
+            id: z.string().max(80),
+            title: z.string().max(200),
+            acceptance: z.string().max(2000),
+            status: z.literal("proposed"),
+          })
+          .strict(),
+      )
+      .max(100),
+    tasks: z
+      .array(
+        z
+          .object({ title: z.string().max(200), detail: z.string().max(2000) })
+          .strict(),
+      )
+      .max(100),
+    requiredGates: z
+      .array(
+        z
+          .object({
+            id: checkInput.shape.gate,
+            label: z.string().max(200),
+            requirement: z.string().max(2000),
+          })
+          .strict(),
+      )
+      .length(3),
+  })
+  .strict();
+const checkSchema = checkInput
+  .extend({
+    id: z.uuid(),
+    source: z.enum(["operator-declared", "imported-operator-declared"]),
+    specHash: hash,
+    createdAt: z.iso.datetime(),
+    importedFrom: z
+      .object({
+        checkId: z.uuid(),
+        source: z.enum(["operator-declared", "imported-operator-declared"]),
+      })
+      .strict()
+      .optional(),
+  })
+  .strict();
+const runSchema = z
+  .object({
+    id: z.uuid(),
+    projectId: z.uuid(),
+    createdAt: z.iso.datetime(),
+    specHash: hash,
+    plan: planSchema,
+    checks: z.array(checkSchema),
+    spentCents: nonnegative,
+    reservedCents: nonnegative,
+    review: z
+      .object({
+        status: z.enum(["needs-evidence", "ready-for-human-review"]),
+        missing: z.array(checkInput.shape.gate),
+        assurance: z.string().max(2000),
+      })
+      .strict()
+      .optional(),
+    importedFrom: z
+      .object({ runId: z.uuid(), specHash: hash })
+      .strict()
+      .optional(),
+  })
+  .strict();
+export const payloadSchema = z
   .object({
     formatVersion: z.literal(1),
     kind: z.literal("forge-project-export"),
     exportedAt: z.iso.datetime(),
-    project: z.object({
-      id: z.uuid(),
-      name: z.string(),
-      description: z.string(),
-      createdAt: z.iso.datetime(),
-      runs: z.array(z.unknown()),
-    }),
+    project: projectInput
+      .extend({
+        id: z.uuid(),
+        createdAt: z.iso.datetime(),
+        runs: z.array(runSchema),
+        restoredFrom: originSchema.optional(),
+      })
+      .strict(),
   })
   .strict();
 const digest = (payload) =>
   createHash("sha256").update(JSON.stringify(payload)).digest("hex");
+function validatePayload(payload) {
+  payloadSchema.parse(payload);
+  const project = payload.project,
+    ids = new Set(),
+    checkIds = new Set();
+  for (const run of project.runs) {
+    if (ids.has(run.id) || run.projectId !== project.id)
+      throw Error("Identidade de execução inválida no backup.");
+    ids.add(run.id);
+    if (digest(run.plan) !== run.specHash)
+      throw Error("Especificação não corresponde ao SHA-256 da execução.");
+    if (
+      run.plan.requiredGates.length !==
+        new Set(run.plan.requiredGates.map((g) => g.id)).size ||
+      !gates.every((g) => run.plan.requiredGates.some((x) => x.id === g.id))
+    )
+      throw Error("Critérios de revisão inválidos.");
+    for (const check of run.checks) {
+      if (checkIds.has(check.id) || check.specHash !== run.specHash)
+        throw Error("Identidade ou especificação da evidência inválida.");
+      checkIds.add(check.id);
+    }
+  }
+}
 export function exportProject(project) {
-  const payload = payloadSchema.parse({
+  const payload = {
     formatVersion: 1,
     kind: "forge-project-export",
     exportedAt: new Date().toISOString(),
-    project,
-  });
+    project: structuredClone(project),
+  };
+  validatePayload(payload);
   return {
     payload,
     integrity: {
@@ -36,10 +150,10 @@ export function verifyExport(backup) {
   if (
     backup?.integrity?.algorithm !== "sha256" ||
     backup?.integrity?.canonicalization !== "JSON.stringify(payload)" ||
-    !/^\w{64}$/.test(backup?.integrity?.digest ?? "")
+    !hash.safeParse(backup?.integrity?.digest).success
   )
     throw Error("Formato de integridade inválido.");
-  payloadSchema.parse(backup.payload);
+  validatePayload(backup.payload);
   if (digest(backup.payload) !== backup.integrity.digest)
     throw Error("O conteúdo não corresponde ao SHA-256 registrado.");
   return {
@@ -49,4 +163,39 @@ export function verifyExport(backup) {
     assurance:
       "Integridade do arquivo, não autenticidade da origem nem comprovação dos testes.",
   };
+}
+export function restoreProject(backup) {
+  verifyExport(backup);
+  const original = backup.payload.project,
+    id = randomUUID(),
+    importedAt = new Date().toISOString();
+  const project = {
+    id,
+    name: original.name,
+    description: original.description,
+    createdAt: original.createdAt,
+    restoredFrom: {
+      backupDigest: backup.integrity.digest,
+      projectId: original.id,
+      importedAt,
+    },
+  };
+  const runs = original.runs.map((originalRun) => {
+    const run = structuredClone(originalRun);
+    delete run.review;
+    run.id = randomUUID();
+    run.projectId = id;
+    run.importedFrom = {
+      runId: originalRun.id,
+      specHash: originalRun.specHash,
+    };
+    run.checks = originalRun.checks.map((c) => ({
+      ...structuredClone(c),
+      id: randomUUID(),
+      source: "imported-operator-declared",
+      importedFrom: { checkId: c.id, source: c.source },
+    }));
+    return run;
+  });
+  return { project, runs };
 }

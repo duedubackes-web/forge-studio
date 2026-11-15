@@ -231,7 +231,7 @@ function renderRuns() {
           el(
             "strong",
             {},
-            `${check.outcome === "pass" ? "✓" : "!"} ${run.plan.requiredGates.find((g) => g.id === check.gate)?.label ?? check.gate} · Declaração manual`,
+            `${check.outcome === "pass" ? "✓" : "!"} ${run.plan.requiredGates.find((g) => g.id === check.gate)?.label ?? check.gate} · ${check.source === "imported-operator-declared" ? "Importada; exige revisão" : "Declaração manual"}`,
           ),
           check.evidence,
         ),
@@ -264,3 +264,24 @@ $("#create-run").addEventListener("submit", (event) => {
 $("#back").addEventListener("click", home);
 $("#projects-nav").addEventListener("click", home);
 loadProjects().catch((e) => notify(e.message));
+
+$("#restore-project").addEventListener("submit", (event) => {
+  event.preventDefault();
+  submit(event.currentTarget, async () => {
+    const file = $("#backup-file").files[0];
+    if (!file || file.size > 2 * 1024 * 1024)
+      throw Error("Selecione um backup JSON de até 2 MiB.");
+    let backup;
+    try {
+      backup = JSON.parse(await file.text());
+    } catch {
+      throw Error("O arquivo não contém JSON válido.");
+    }
+    const project = await api("/api/projects/import", backup);
+    $("#restore-project").reset();
+    await openProject(project.id);
+    notify(
+      "Backup restaurado em uma nova cópia. Revise novamente os critérios antes de aprovar.",
+    );
+  });
+});

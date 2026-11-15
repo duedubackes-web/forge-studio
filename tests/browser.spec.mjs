@@ -111,3 +111,38 @@ test("project backup can be downloaded and verified independently", async ({
   expect(verifyExport(backup).valid).toBe(true);
   expect(backup.payload.project.name).toBe("Projeto exportável");
 });
+
+test("downloaded backup restores through file picker without losing the original", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page
+    .getByLabel("Nome do projeto", { exact: true })
+    .fill("Recuperação pelo navegador");
+  await page.getByRole("button", { name: "Criar projeto" }).click();
+  await page
+    .getByLabel("Objetivo da tarefa")
+    .fill("Um painel com login e cadastro de dados.");
+  await page.getByRole("button", { name: "Gerar plano local" }).click();
+  const downloadEvent = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Exportar backup do projeto" }).click();
+  const file = await (await downloadEvent).path();
+  await page.getByRole("button", { name: "Todos os projetos" }).click();
+  await page
+    .getByText("Restaurar um projeto de backup", { exact: true })
+    .click();
+  await page
+    .getByLabel("Arquivo de backup JSON (até 2 MiB)")
+    .setInputFiles(file);
+  await page.getByRole("button", { name: "Restaurar como nova cópia" }).click();
+  await expect(page.locator("#notice")).toContainText(
+    "Backup restaurado em uma nova cópia",
+  );
+  await expect(
+    page.getByText("Aguardando evidências", { exact: true }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Todos os projetos" }).click();
+  await expect(
+    page.getByRole("button", { name: /Recuperação pelo navegador/ }),
+  ).toHaveCount(2);
+});

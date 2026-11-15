@@ -36,7 +36,7 @@
         </div>
         <div class="profile">
           <span class="avatar">D</span>
-          <div>Workspace pessoal<small>Forge Studio · v0.2</small></div>
+          <div>Workspace pessoal<small>Forge Studio · v0.3</small></div>
         </div>
       </aside>
       <main>
@@ -117,6 +117,25 @@
             <span>Do conceito à revisão</span>
           </div>
           <div id="project-list" class="project-grid"></div>
+          <details class="panel restore-panel">
+            <summary>Restaurar um projeto de backup</summary>
+            <p class="hint">
+              Cria uma nova cópia. Os registros de evidências são mantidos, mas
+              exigem nova revisão.
+            </p>
+            <form id="restore-project">
+              <label for="backup-file">Arquivo de backup JSON (até 2 MiB)</label
+              ><input
+                id="backup-file"
+                type="file"
+                accept=".json,application/json"
+                required
+              />
+              <button class="primary" type="submit">
+                Restaurar como nova cópia
+              </button>
+            </form>
+          </details>
         </section>
         <section id="project-view" hidden>
           <button id="back" class="back">← Todos os projetos</button>

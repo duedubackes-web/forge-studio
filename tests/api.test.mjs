@@ -153,3 +153,109 @@ test("export API preserves project history and provides verifiable download", as
     404,
   );
 });
+
+test("restore creates collision-free copies, preserves original and invalidates imported approvals", async (t) => {
+  const f = await fixture(t);
+  const p = (await f.request("/api/projects", { name: "Projeto recuperável" }))
+    .body;
+  const path = `/api/projects/${p.id}`;
+  const r = (
+    await f.request(path + "/runs", {
+      prompt: "Portal com login e painel de clientes.",
+      budgetCents: 1000,
+    })
+  ).body;
+  for (const gate of ["functional", "visual", "data-isolation"])
+    await f.request(`${path}/runs/${r.id}/checks`, {
+      gate,
+      outcome: "pass",
+      evidence: "Verificação manual concluída no ambiente original.",
+    });
+  const backup = (await f.request(path + "/export")).body;
+  const first = await f.request("/api/projects/import", backup);
+  const second = await f.request("/api/projects/import", backup);
+  assert.equal(first.status, 201);
+  assert.equal(second.status, 201);
+  assert.notEqual(first.body.id, p.id);
+  assert.notEqual(first.body.id, second.body.id);
+  assert.notEqual(first.body.runs[0].id, r.id);
+  assert.notEqual(first.body.runs[0].id, second.body.runs[0].id);
+  assert.equal(first.body.runs[0].review.status, "needs-evidence");
+  assert.equal(first.body.runs[0].checks.length, 3);
+  assert.ok(
+    first.body.runs[0].checks.every(
+      (c) => c.source === "imported-operator-declared",
+    ),
+  );
+  assert.equal(first.body.restoredFrom.backupDigest, backup.integrity.digest);
+  assert.equal(
+    (await f.request(path)).body.runs[0].review.status,
+    "ready-for-human-review",
+  );
+  const newPath = `/api/projects/${first.body.id}`,
+    newRun = first.body.runs[0].id;
+  for (const gate of ["functional", "visual", "data-isolation"])
+    await f.request(`${newPath}/runs/${newRun}/checks`, {
+      gate,
+      outcome: "pass",
+      evidence: "Nova verificação manual após recuperação do projeto.",
+    });
+  assert.equal(
+    (await f.request(newPath)).body.runs[0].review.status,
+    "ready-for-human-review",
+  );
+  const restoredBackup = (await f.request(newPath + "/export")).body;
+  assert.equal(
+    (await f.request("/api/projects/import", restoredBackup)).status,
+    201,
+  );
+  assert.equal(
+    new Store(f.dataPath).project(first.body.id).runs[0].checks.length,
+    6,
+  );
+});
+test("malformed, tampered and semantically inconsistent backups never modify persistence", async (t) => {
+  const f = await fixture(t);
+  const p = (await f.request("/api/projects", { name: "Original protegido" }))
+    .body;
+  const path = `/api/projects/${p.id}`;
+  await f.request(path + "/runs", {
+    prompt: "Portal de clientes com dados isolados.",
+    budgetCents: 100,
+  });
+  const backup = (await f.request(path + "/export")).body;
+  const before = await readFile(f.dataPath, "utf8");
+  const { createHash } = await import("node:crypto");
+  const reseal = (x) => {
+    x.integrity.digest = createHash("sha256")
+      .update(JSON.stringify(x.payload))
+      .digest("hex");
+    return x;
+  };
+  const tampered = structuredClone(backup);
+  tampered.payload.project.name = "Conteúdo alterado";
+  const wrongVersion = structuredClone(backup);
+  wrongVersion.payload.formatVersion = 2;
+  const foreignRun = structuredClone(backup);
+  foreignRun.payload.project.runs[0].projectId =
+    "00000000-0000-4000-8000-000000000000";
+  reseal(foreignRun);
+  const wrongSpec = structuredClone(backup);
+  wrongSpec.payload.project.runs[0].plan.prompt =
+    "Outro objetivo que não corresponde ao hash.";
+  reseal(wrongSpec);
+  for (const invalid of [
+    {},
+    { integrity: backup.integrity },
+    tampered,
+    reseal(wrongVersion),
+    foreignRun,
+    wrongSpec,
+  ]) {
+    assert.equal(
+      (await f.request("/api/projects/import", invalid)).status,
+      400,
+    );
+    assert.equal(await readFile(f.dataPath, "utf8"), before);
+  }
+});

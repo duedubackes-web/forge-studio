@@ -7,6 +7,7 @@ import {
   checkInput,
   reviewStatus,
 } from "./domain.mjs";
+import { restoreProject } from "./backup.mjs";
 export class Store {
   constructor(path) {
     this.path = path;
@@ -43,6 +44,15 @@ export class Store {
             .map((r) => ({ ...r, review: reviewStatus(r) })),
         })
       : null;
+  }
+  restore(backup) {
+    const { project, runs } = restoreProject(backup);
+    this.save({
+      ...this.state,
+      projects: [...this.state.projects, project],
+      runs: [...this.state.runs, ...runs],
+    });
+    return this.project(project.id);
   }
   addProject(input) {
     const p = {

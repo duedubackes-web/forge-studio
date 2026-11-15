@@ -18,15 +18,17 @@ function send(res, status, payload) {
   });
   res.end(JSON.stringify(payload));
 }
-async function body(req) {
+async function body(req, maxBytes = 16384) {
   if (req.headers["content-type"]?.split(";")[0] !== "application/json")
     throw Object.assign(Error("Use application/json."), { status: 415 });
   let bytes = 0;
   const chunks = [];
   for await (const chunk of req) {
     bytes += chunk.length;
-    if (bytes > 16384)
-      throw Object.assign(Error("Solicitação excede 16 KB."), { status: 413 });
+    if (bytes > maxBytes)
+      throw Object.assign(Error(`Solicitação excede ${maxBytes} bytes.`), {
+        status: 413,
+      });
     chunks.push(chunk);
   }
   try {
@@ -65,6 +67,16 @@ export function createApp({ dataPath }) {
           mode: "local-prototype",
           aiConnected: false,
         });
+      if (path === "/api/projects/import" && req.method === "POST") {
+        let backup = await body(req, 2 * 1024 * 1024);
+        try {
+          return send(res, 201, store.restore(backup));
+        } catch (error) {
+          if (error instanceof ZodError) throw error;
+          if (error.code) throw error;
+          return send(res, 400, { error: error.message });
+        }
+      }
       if (path === "/api/projects") {
         if (req.method === "GET") return send(res, 200, store.list());
         if (req.method === "POST")

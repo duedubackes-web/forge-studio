@@ -25,6 +25,8 @@ test("missing or failed gates block review; newest failure supersedes old pass",
   r.checks = ["functional", "visual", "data-isolation"].map((gate) => ({
     gate,
     outcome: "pass",
+    source: "operator-declared",
+    specHash: r.specHash,
   }));
   assert.equal(reviewStatus(r).status, "ready-for-human-review");
   r.checks.push({ gate: "functional", outcome: "fail" });

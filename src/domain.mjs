@@ -123,7 +123,14 @@ export function createRun(projectId, input) {
 export function reviewStatus(run) {
   const latest = new Map(run.checks.map((c) => [c.gate, c]));
   const missing = gates
-    .filter((g) => latest.get(g.id)?.outcome !== "pass")
+    .filter((g) => {
+      const check = latest.get(g.id);
+      return (
+        check?.outcome !== "pass" ||
+        check?.source !== "operator-declared" ||
+        check?.specHash !== run.specHash
+      );
+    })
     .map((g) => g.id);
   return {
     status: missing.length ? "needs-evidence" : "ready-for-human-review",

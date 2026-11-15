@@ -12,4 +12,4 @@ A pasta `.data` não está no Git. Commit e push preservam código, não o hist�
 npm run backup:verify -- /caminho/forge-project-ID.json
 ```
 
-A verificação detecta alteração de conteúdo em relação ao checksum exportado. Ela não autentica a origem, não executa os testes descritos e não restaura automaticamente o estado. Importação com migração e recuperação remota seguem no roadmap.
+A verificação detecta alteração de conteúdo em relação ao checksum exportado. Ela não autentica a origem, não executa os testes descritos e não restaura automaticamente o estado. A interface restaura backups do formato 1 como novas cópias (até 2 MiB). Conteúdo, identidades e hashes são validados antes de gravar; evidências importadas não contam como revisão atual. Migração entre versões de formato e recuperação remota seguem no roadmap.

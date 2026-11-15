@@ -44,3 +44,14 @@ O workflow foi preparado para Node 24 e 26; a execução local registrada aqui u
 - O histórico e a licença MIT do repositório criado pelo usuário foram preservados; o envio ao GitHub foi concluído. O bloqueio para criá-lo na v0.1 é histórico.
 - Nenhum teste autenticado de v0/Vercel/Codespaces, benchmark comparativo ou Codespace hospedado foi executado.
 - Configuração de dev container preparada; sua inicialização hospedada não foi testada.
+
+## Ampliação v0.3
+
+- `npm run check`: checagem de tipos e 14 testes de domínio/API passaram.
+- `PLAYWRIGHT_CHROMIUM_EXECUTABLE=/usr/bin/chromium npm run test:browser`: 4 testes passaram.
+- Fluxo novo: exportar, importar via seletor de arquivo, recuperar em uma nova cópia e manter o original.
+- Backups alterados, versões desconhecidas, execução de outro projeto e hashes de especificação divergentes são recusados sem alterar a persistência.
+- Duas importações não colidem; reexportar e restaurar uma cópia também funciona.
+- Aprovações importadas não satisfazem critérios atuais; novas declarações podem concluir a revisão.
+- Acesso autenticado Vercel confirmado pelo conector com leituras de identidade, equipes e metadados de projetos. Não foram lidos segredos, dados de aplicação ou arquivos privados para publicar no repositório.
+- Não houve inspeção de sessão autenticada do v0, chamada paga de modelo, implantação ou criação de recursos externos nesta etapa.
