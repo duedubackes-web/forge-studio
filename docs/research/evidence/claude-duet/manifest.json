@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-15T11:27:30.079236+00:00",
+  "scope": "Three unauthenticated official documentation pages; no application session, scripts, response bodies or credentials retained",
+  "tools": {
+    "rea": "6.9.0",
+    "craftAnything": "0.6.1"
+  },
+  "sources": [
+    {
+      "url": "https://claude.com/resources/articles/claude-duet",
+      "status": 200
+    },
+    {
+      "url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet",
+      "status": 200
+    },
+    {
+      "url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
+      "status": 200
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "public-http.har",
+      "bytes": 5375,
+      "sha256": "2e05a5c41d8d085f9e4de8ef63558369bb35308c282db944c0960f9ce7ca692b"
+    },
+    {
+      "file": "rea.json",
+      "bytes": 12157,
+      "sha256": "78c2394d7b8ff32a9f8f5086eabd16bff4b4ebc4e3749533ee384aeadf86dfb4"
+    },
+    {
+      "file": "craft.json",
+      "bytes": 4792,
+      "sha256": "2281a0f53961dbe7055c1fe6f9164c76ddedc12c4177834365084444468a84a7"
+    }
+  ]
+}

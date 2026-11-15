@@ -51,3 +51,13 @@ Acesso Vercel autenticado verificado em leitura; isso não implica acesso ao có
 F08: adicionada inspeção CLI de metadados Git, com commit/branch/estado local. Continua parcial em relação ao objetivo: não cria branches, não aplica diffs e não conecta o agente ao repositório.
 
 Pesquisa Codex: fonte pública fixada, protocolo de estados examinado e REA/Craft aplicados a uma captura HTTP limitada. Sem acesso à sessão local autenticada. [Relatório](research/codex.md).
+
+## Pesquisa Claude Duet
+
+REA e Craft Anything aplicados a três páginas oficiais, com evidências e hashes. [Relatório](research/claude-duet.md). Requisitos propostos, ainda não implementados:
+
+- F21 — P1: separar resultado proposto e aceite do usuário; tarefa e entregáveis com identidades relacionadas.
+- F22 — P1: pausar rotinas e discriminar seu consumo; só avançar após agente e execução reais.
+- F23 — P1: memória com origem por fonte; revogar acesso e apagar memória como controles separados.
+
+Nenhum desses recursos é anunciado como pronto.
