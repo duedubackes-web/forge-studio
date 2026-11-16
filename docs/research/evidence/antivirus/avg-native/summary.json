@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-16T10:14:14.515167+00:00",
+  "download": {
+    "retrieved_at": "2026-11-16T10:11:16.942574+00:00",
+    "source_page": "https://www.avg.com/pt-br/download-thank-you.php?product=FREEGSR",
+    "download_url": "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_WIN_AVG/installertype_ONLINE/build_RELEASE/cookie_mmm_bav_998_999_000_m:dlid_FREEGSR?alt=pt-br",
+    "final_url": "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_WIN_AVG/installertype_ONLINE/build_RELEASE/cookie_mmm_bav_998_999_000_m:dlid_FREEGSR?alt=pt-br",
+    "bytes": 250080,
+    "sha256": "c05adb8c993541a0f9137cc23c02affdb85f46275d7f34c4889fc27413a85b87",
+    "headers": {
+      "content-type": "application/octet-stream",
+      "content-disposition": "attachment; filename=\"=?UTF-8?Q?avg=5Fantivirus=5Ffree=5Fsetup.exe?=\"; filename*=UTF-8''avg_antivirus_free_setup.exe"
+    },
+    "scope": "Current official online installer; not proof of latest installed engine version"
+  },
+  "version": {
+    "file_version": "2.1.137.0",
+    "product_version": "2.1.137.0",
+    "strings": {
+      "CompanyName": "Gen Digital Inc.",
+      "Edition": "15",
+      "FileDescription": "AVG Installer",
+      "FileVersion": "2.1.137.0",
+      "InternalName": "microstub",
+      "LegalCopyright": "Copyright Â© 2025 Gen Digital Inc. All rights reserved.",
+      "OriginalFilename": "microstub.exe",
+      "ProductName": "AVG",
+      "ProductVersion": "2.1.137.0"
+    }
+  },
+  "counts": {
+    "basic_blocks": 7576,
+    "cross_references": 9558,
+    "exports": 0,
+    "functions": 680,
+    "functions_with_generated_names": 674,
+    "imports": 202,
+    "instructions": 42119,
+    "jump_tables": 11,
+    "strings": 1962,
+    "symbols": 0
+  },
+  "resources": {
+    "entries": 39,
+    "truncated": false
+  },
+  "tools": {
+    "rea": "6.9.0",
+    "craft-anything-cli": "0.6.1"
+  },
+  "coverage": {
+    "functions_inventoried": 680,
+    "functions_studied": 4,
+    "binary_executed": false,
+    "installed_engine_version_verified": false
+  },
+  "failures": [
+    {
+      "operation": "rea inspect-pe-certificates",
+      "exit_code": 1,
+      "reason": "WIN_CERTIFICATE has invalid PKCS#7 alignment padding",
+      "interpretation": "Parser failure; does not establish invalid signature. OpenSSL decoded embedded certificates; Authenticode validity was not verified."
+    }
+  ],
+  "artifact_manifest": [
+    {
+      "file": "authenticode.p7b",
+      "bytes": 5776,
+      "sha256": "c09ffd861b47fc054631c1f1ada261dea44acbe0912fffb5b10694d9101e6497",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "avg_antivirus_free_setup.exe",
+      "bytes": 250080,
+      "sha256": "c05adb8c993541a0f9137cc23c02affdb85f46275d7f34c4889fc27413a85b87",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-function-0x404d20.json",
+      "bytes": 34595,
+      "sha256": "eb1bdb33a4bb9d1b0312aa5a95215b119a12839beff71e787afc2181c7c3e7bd",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-function-0x406020.json",
+      "bytes": 865381,
+      "sha256": "c4737125524a70d4b7d842353be1aa2cad332ab9f92a0f5128822bb030a37bd6",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-function-0x409ab0.json",
+      "bytes": 68668,
+      "sha256": "e97a6eaeec4f6c0edd26b7bff410d1d8fe682f49205d585b8b6a9be490bae8b8",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-function-0x409e10.json",
+      "bytes": 81880,
+      "sha256": "94d1101ff00830370f5ad78ad1dc60f8e3e7b05441328230490331c9d850b5d1",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-functions.json",
+      "bytes": 98815,
+      "sha256": "bb724a22392d3610a337dafbd6e33656caf8c4c0c79daea16ce6935f2cf689e1",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-overview.json",
+      "bytes": 3058,
+      "sha256": "748469f7cf4e7a610c5f9b16418afcdfcb80638c2c44040fcee059a3ede0d863",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-resources.json",
+      "bytes": 9799,
+      "sha256": "d4e32f7de87319eb00faf48b6bef9757c8cca72805f6e4260341279ccc04b896",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-strings.json",
+      "bytes": 7240,
+      "sha256": "230e39614864bb25321f19c34f32879bf9cfe2547c10a1f5080ba05ceba78b1c",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "craft-triage.json",
+      "bytes": 2168,
+      "sha256": "cd7719c8d05401d4cd0902a5a0ac51b7f2d633d1a92e3a40383869a184f830f6",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "download-identity.json",
+      "bytes": 920,
+      "sha256": "ce27a56728cb57f0c434a1a4c42e0eaae08487dc43a1b6ec36b3607811e2e7f5",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "download-page.html",
+      "bytes": 47643,
+      "sha256": "baa82d51efe5e3c85dc8a341c87e8c0514fb5b653ee25bc4eefe3bc97590cce9",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "rea-inspect-binary-hardening.json",
+      "bytes": 5033,
+      "sha256": "8385190e4f4829850b532185af08ce6cda009250142de0074fe91b30d699e8c3",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "rea-inspect-native-exports.json",
+      "bytes": 1998,
+      "sha256": "2355f3ccb5589dd4dacb18a41d3a21a245ad13eaa4e3d1acf92c8fa845abd4b1",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "rea-inspect-pe-certificates.json",
+      "bytes": 842,
+      "sha256": "c7c9ab81ad75a46bd48b865d10e4229f006cdb60577afa7ef929d8015a0db513",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "rea-inspect-pe-imports.json",
+      "bytes": 26787,
+      "sha256": "06072a033e4a9f776fc99884fa8c5769000ee558957ed612170122300ea06fcf",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "rea-inspect-pe-load-config.json",
+      "bytes": 5583,
+      "sha256": "0577450ce48e00b087fccdedb9c0e6bc694f1ebeb148429908d43a511661c8f2",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "rea-inspect-pe-resources.json",
+      "bytes": 27300,
+      "sha256": "765089d15cb79d7b8e7d8e595da601f185cc60a9aaba5dd2ebaf89cb86dc8a5c",
+      "retained": "local-analysis-only"
+    },
+    {
+      "file": "sections.txt",
+      "bytes": 852,
+      "sha256": "4262642083ae2e3dfd95fdb0967a4e5e94ec83e4aa03e136a2a2ae23ab5e79ac",
+      "retained": "local-analysis-only"
+    }
+  ]
+}

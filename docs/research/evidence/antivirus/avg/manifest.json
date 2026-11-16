@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "analyzed_at": "2026-11-16T10:09:03.306563+00:00",
+  "tools": {
+    "rea": "6.9.0",
+    "craft-anything-cli": "0.6.1"
+  },
+  "scope": "Two historical public HTTP responses from AVG website; not AVG native executable",
+  "native_binary_available": false,
+  "files": [
+    {
+      "file": "avg-public.har",
+      "sha256": "60008e7595b892370333e876b9751ba9850d1ebb8cc23b9910b1f81fc98809d0",
+      "bytes": 3517
+    },
+    {
+      "file": "rea.json",
+      "sha256": "bb0a076a8b76a983719c55b29bd25426c42e096a99c17b84e8d0f188c795d69c",
+      "bytes": 9548
+    },
+    {
+      "file": "craft.json",
+      "sha256": "a64bec4e89e6c18e0efa3bd69cddea78f3221db46ce6ed9f7e94fc152923a8af",
+      "bytes": 3339
+    }
+  ]
+}
