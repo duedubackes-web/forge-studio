@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-16T09:39:46.558659+00:00",
+  "tools": [
+    {
+      "name": "forge-studio",
+      "source": "https://github.com/duedubackes-web/forge-studio",
+      "commit": "334893a7808cca930bfa351518936d8d7e7d0aab",
+      "status": "source-cloned",
+      "analysis_executed": false
+    },
+    {
+      "name": "rea",
+      "source": "https://github.com/morluto/rea",
+      "commit": "d6bcfc10eafa3c0893c7cbd5f3dc6a90359be022",
+      "status": "source-cloned",
+      "analysis_executed": false
+    },
+    {
+      "name": "craft-anything",
+      "source": "https://github.com/storytold/craft-anything",
+      "commit": "090188d70545477d0e8ed0b218a53986903f0e78",
+      "status": "source-cloned",
+      "analysis_executed": false
+    }
+  ],
+  "targets": {
+    "Kaspersky": "public-http-observed; no-native-artifact",
+    "AVG": "public-http-observed; no-native-artifact"
+  },
+  "limitations": [
+    "Source checkout does not establish an installed executable.",
+    "No antivirus binary, engine, signatures or proprietary source was extracted."
+  ],
+  "capture": {
+    "file": "public-http.har",
+    "sha256": "a490bd4d149070f0e302ac6a66d8a76b53f3b3179fd1adc5a6a819207c3da53f",
+    "entries": 4,
+    "tool_analysis_executed": false
+  }
+}
