@@ -1,0 +1,1701 @@
+{
+  "source": {
+    "repo": "qubes-core-admin-client",
+    "branch": "release4.3",
+    "commit": "57a4b6c6baff05217abf071452da141e5a800f33",
+    "url": "https://codeload.github.com/QubesOS/qubes-core-admin-client/zip/57a4b6c6baff05217abf071452da141e5a800f33",
+    "bytes": 483615,
+    "sha256": "b9e38958080457d563daf2f0fa172b039fe0a5636b221ffbe3b1c94d5e3d1263"
+  },
+  "files": [
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/.gitignore",
+      "bytes": 78,
+      "sha256": "0b8fd97400a41345444afb15b090795e4ec6c3e8c7bf251d8b22a844988b9198"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/.gitlab-ci.yml",
+      "bytes": 1135,
+      "sha256": "b5e55ec400a6155773222df9708437fbbd99e0f34a1729d964163a9a563840a8"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/.pylintrc",
+      "bytes": 5116,
+      "sha256": "efc6fa6e8c5c2a221bf1d4f75a80a58800b4a25d4c84aa8760e7144d3bd8eccb"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/.qubesbuilder",
+      "bytes": 165,
+      "sha256": "42d2bed000f17f25ea04684629f39d5cb9b86c3221e9bf669dcf6a1e30a20e3a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/.readthedocs.yaml",
+      "bytes": 161,
+      "sha256": "6e9a92327d1992fca9cd015ee4063ba003a0e009515d833706b3f3c179babd05"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/LICENSE",
+      "bytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/Makefile",
+      "bytes": 1074,
+      "sha256": "5795c1c87ab34dc234542c80f6c6e1a9160f4ca1c95c969dab1e0f0fef9e3a3b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/Makefile.builder",
+      "bytes": 84,
+      "sha256": "92715714842f921882217c37c9894a2a9069ed7374ebadf7fd61740c32dff888"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/README.md",
+      "bytes": 196,
+      "sha256": "70090cb5da2739d9049ef6d48008f631213518b325953e298d199ff6921768cc"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/ci/codecov-keys.asc",
+      "bytes": 3187,
+      "sha256": "d56942c32a1bb70af75bf972302b6114049fb59cb76193fac349bb9b587b60c2"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/ci/codecov-wrapper",
+      "bytes": 763,
+      "sha256": "0a139b93a323ff86a568939b6a981d176e2321505c02ebdefb7d0b356f21f507"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/ci/coveragerc",
+      "bytes": 123,
+      "sha256": "2c86bda16b48311b022eedac87ab7d76b7b911a3a585a0b15c1502156644e971"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/ci/requirements.txt",
+      "bytes": 212,
+      "sha256": "aac3cb262fc0142c7852403c8cdef31f761e9deb6e59d773c1ba3c4a924d72f9"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/debian/changelog",
+      "bytes": 81782,
+      "sha256": "3100f68bacb1c1680be0c70f066ba02fd48d2ba522adc9a8ffcb6041d9893e89"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/debian/compat",
+      "bytes": 2,
+      "sha256": "2e6d31a5983a91251bfae5aefa1c0a19d8ba3cf601d0e8a706b4cfa9661a6b8a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/debian/control",
+      "bytes": 1273,
+      "sha256": "e20737fb44c7755a48d17f491117e710cdc636953aa0efb8a71de401bd7a8d21"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/debian/copyright",
+      "bytes": 1916,
+      "sha256": "96f6bc1c2fb538260dbb65e18a52d5e4f7002fdbd40e6a9c65c4c0ea51d8facc"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/debian/rules",
+      "bytes": 1266,
+      "sha256": "ac37a36581630a5f672003835f78f20e42e4de1be2c14ff57f8a1fbd70051571"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/debian/source/format",
+      "bytes": 12,
+      "sha256": "1be7080d72e6b566df3e236ce2c55efdfbbb8fa1c972d825e5b672ff8773be1a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/Makefile",
+      "bytes": 7869,
+      "sha256": "852346ecaeda2ac6c69ef5d30a400273261fef7863fe6c768e51424e9503c151"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/conf.py",
+      "bytes": 13079,
+      "sha256": "e37b64d8314f0b8066fd9e56fefa991bbeb9412b91c493f8d5dfcca79f58ace4"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/index.rst",
+      "bytes": 489,
+      "sha256": "7e32769d04ca79957e2a564fda6122876458f17f601e8160df59b1b46e0a34d0"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/index.rst",
+      "bytes": 173,
+      "sha256": "8c0be4c9f43220bb7abff666cca4833f1f2831b87400c6681f0df1784e2cede9"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qubes-prefs.rst",
+      "bytes": 2863,
+      "sha256": "0c0aaf3269cb049d30092fbc52b100bb149fa83f0451a83091d2d3a6efb1795c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-backup-restore.rst",
+      "bytes": 3483,
+      "sha256": "27027fbf0dbecebe7702bb5008a20478bd3e665cbdd9180867a9541825096673"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-backup.rst",
+      "bytes": 2765,
+      "sha256": "ef1e5ca8c816ca9f8d2fc9e75706847f1e75d3ef850ed791c03a7fec8b7eedc1"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-check.rst",
+      "bytes": 1702,
+      "sha256": "a896556b385f45b77af25bd3334652b953db4ab8d03b27f47a3e09c8553fcc59"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-clone.rst",
+      "bytes": 1856,
+      "sha256": "c34512bae2373cce9eef8e8e7ada7d987daec1b2a26c8771ecac45cbbd2c138b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-create.rst",
+      "bytes": 3672,
+      "sha256": "a69d71c6f65eb14b29f811ba9b751b49239d783ef7f04e7ebe8071fc75938b1a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-device.rst",
+      "bytes": 7472,
+      "sha256": "e43be12a312cb0529c203d5098f54b85ada953e02e34ae758ddfad5449431701"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-features.rst",
+      "bytes": 20975,
+      "sha256": "bf53b6dc62351967bb3940422373ddd4ab2845f914f50d1b753f6474827db55d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-firewall.rst",
+      "bytes": 3262,
+      "sha256": "7e24664fc5b9fedf6f186665ae302f286d80c4c5610fa1281d9c00e239db53d2"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-kill.rst",
+      "bytes": 1041,
+      "sha256": "9e48ad05faa6e3e884a6905c89b1845205c3401bb928926e9cfc9a89ba68dc33"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-ls.rst",
+      "bytes": 5097,
+      "sha256": "3f6a29f68f214dc0e01b4976d261afc31819a9e86457a40db4e5bcef2694425b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-notes.rst",
+      "bytes": 2043,
+      "sha256": "5c7484a1203393706eaa6a10ee3e93c46dc364dda0b29f62d1a1310d7d366231"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-pause.rst",
+      "bytes": 1228,
+      "sha256": "6cabb8d4c46d4e27a759beba68c2555284e084d1ab58dd525a6a8f3b47544441"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-pool.rst",
+      "bytes": 3719,
+      "sha256": "1df8bdc295cad19772a7bc288d65b1ebe7f3a31d3fe1b7f6f5aafd4018680bab"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-prefs.rst",
+      "bytes": 7108,
+      "sha256": "f496cd7b95518cc8cda5c45dbaa146d9837fae5b08fb04439b7592f3ebcdde8c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-remove.rst",
+      "bytes": 1424,
+      "sha256": "308e95a4d6f37db791b04e836d04fa4e150917b3722c45d151e84688842a7cbb"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-run.rst",
+      "bytes": 4787,
+      "sha256": "d2dd1c3d78688bdeec580245bfb615144e37ddce9c79cc9b50fe97bc252a74df"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-service.rst",
+      "bytes": 6975,
+      "sha256": "f4d631d9174442146584d45585b8ada55afbcb5070b37d2832d7e871e5cc021a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-shutdown.rst",
+      "bytes": 1653,
+      "sha256": "5b6246da3a77da742916d4901adf02d61a4fc1cf488544207d7ffe252d08801a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-start-daemon.rst",
+      "bytes": 2221,
+      "sha256": "0e83d1a8de6f8e6270d20191115622d5f68ea257a040632e74c38f04aeffc1e4"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-start.rst",
+      "bytes": 2350,
+      "sha256": "61d3aeaa0a53b70bd015825997baba60aa03d74b2d4c2eefc109f0f740a3e271"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-tags.rst",
+      "bytes": 1776,
+      "sha256": "421d54b2fc0803c1da134a15372eb27f0798016d6d8572842db8d7be502d04a2"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-template.rst",
+      "bytes": 11959,
+      "sha256": "81956e5df0bcc3d4a4b0dbeb96f0f4714da8db7c1832950cf0abf2a8758fdf13"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-unpause.rst",
+      "bytes": 1218,
+      "sha256": "df9548d6b17365bda17fdb6115c501b9da2cbf173e5355bfbc786ba4dc2d3ebc"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-volume.rst",
+      "bytes": 5737,
+      "sha256": "b843e8fe96e41edca2ad9ec4e1f20d79e052fcba00e955b7e0dff374ff1e3fcd"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/modules.rst",
+      "bytes": 67,
+      "sha256": "eb929e6e232e3b86d9930492521fe8afbca7d0431e0e701be3ed89abb8b0fdc2"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.backup.rst",
+      "bytes": 704,
+      "sha256": "9b29973135755520eaa9fc1ae0ee106bdbc56e9bcba6fcede59f524a99dbe876"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.events.rst",
+      "bytes": 368,
+      "sha256": "7db6cfd98b2409a2e2f9896fc38468d478dffb12f4cd0f10115487951ec5fcab"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.rst",
+      "bytes": 2185,
+      "sha256": "c0bbdd9846d820b0e53b0e7ff3f1e9007c4ff026311774b67779e8205d827898"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.tests.backup.rst",
+      "bytes": 450,
+      "sha256": "32294ae10dfc32d2386a536738e6d04ce3b12a841b4edaf74579f11d6921674e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.tests.rst",
+      "bytes": 1804,
+      "sha256": "edb69f608f6f0812233e126ba21beaafe567469f22ebff0efd4c57645fa68f51"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.tests.tools.rst",
+      "bytes": 5238,
+      "sha256": "6f8c71ad99c19bc3f3ea8bac362ab46b8b4edbac775f716101755ef693af19f7"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.tests.vm.rst",
+      "bytes": 933,
+      "sha256": "da61d1ad14e8f201127e36a33ea516cb8eea94c2b9e0cfb4e2a0b6c68d55106b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.tools.rst",
+      "bytes": 4921,
+      "sha256": "7119186447a616a06843828ad6ffb7160b4c3742dd73a879f144f91e6466c25c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/qubesadmin.vm.rst",
+      "bytes": 167,
+      "sha256": "43833dea55daf30958ebfd9feb698cb039523c32d0cc84ab924f57d95852c1aa"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/skel-manpage.py",
+      "bytes": 571,
+      "sha256": "f37866fdf332c49d44e2cc6420f566b0a95f9d250cf668f1cb43eaeb3b5b024e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/etc/qvm-start-daemon-kde.desktop",
+      "bytes": 193,
+      "sha256": "2cadd860fce8765b707b1ca9fb608d1171142d74eeff9fd2f826fa0b195b5cb2"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/etc/qvm-start-daemon.desktop",
+      "bytes": 179,
+      "sha256": "769bc582cd2a827cb2b9e78cc34c022897448394fc36bc8c91d47a101092332c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/pyproject.toml",
+      "bytes": 1068,
+      "sha256": "3eb51fba10e0d0d67a473f3d6e337c9e3ea155922d508f27ce8775810f34ce11"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/__init__.py",
+      "bytes": 1127,
+      "sha256": "cd34f70ccf6a9769aa464e5364d0f6a5cf4194a108bb50a3e4ffe89e1c83232c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/app.py",
+      "bytes": 39465,
+      "sha256": "b461cd25234b057f6f8f751bb3693b7a9807e32d09ad0c8d7b422b378bfa14e6"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/__init__.py",
+      "bytes": 2577,
+      "sha256": "269a376779a1ea5544102968a21cd6a1b6b15bef0fd78976d1b927dbb402b40b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/core2.py",
+      "bytes": 15240,
+      "sha256": "86c4290c413bbe78e28a2bbbed731a8ab7675187ff0a20f73405474cb9a23cb7"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/core3.py",
+      "bytes": 6559,
+      "sha256": "f5ad6d0f8a0b9bd84a57aa9c809d121778f186b9d6f0d27b7ab5ca4a67e101e8"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/dispvm.py",
+      "bytes": 15667,
+      "sha256": "3c98aeab746d9eb1771c1b2129b225e650d95f832e88d4c6750d2b0f165d42e8"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/restore.py",
+      "bytes": 91566,
+      "sha256": "def0772a5f20b98eab6703fd5feb4bfd53195d22be404edeed21490ada3f2956"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/base.py",
+      "bytes": 18084,
+      "sha256": "42deb343862780259933dd9b4c2641fb1060ca4c488590097f1c6366545f6f4d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/config.py",
+      "bytes": 1193,
+      "sha256": "aa2ba951e62f8d66dfabe5ce47182cf78b3e2f5e3ddfeadacd83f6dbefd70872"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/device_protocol.py",
+      "bytes": 49156,
+      "sha256": "5f098f758bc5f5217b96416959333bd58835dcbb20a12853aa2dd420947c0226"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/devices.py",
+      "bytes": 12899,
+      "sha256": "5c937e6196ae5ffc826bdb0940c62db5c4b6dc669e0e2d8fe84611c6dae49c2e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/events/__init__.py",
+      "bytes": 12216,
+      "sha256": "f88a5761effe8526622e98472dc74463fa8684ff68ea995b3559924fb30c8a22"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/events/utils.py",
+      "bytes": 2067,
+      "sha256": "6d2fe72b3327fc257d0b892cddc2fbad2867f00fe77221a78d11673a32cd145e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/exc.py",
+      "bytes": 6341,
+      "sha256": "480ac55f4cc62edec061bd4e670f2c952f53755b2ceef6460855294cf6eab3fc"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/features.py",
+      "bytes": 3246,
+      "sha256": "2496a39ed1bcd825382c273f27e04b084bab0d1cf9cdf50fe51403f30d401fa0"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/firewall.py",
+      "bytes": 14620,
+      "sha256": "96add6160f545954702c4148deae9d5133acfd2d34b7ecb5713d181166e6dc2f"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/label.py",
+      "bytes": 2778,
+      "sha256": "b22cde88ffadec12184e13c3239c682358380d8073932581006c0884e88a61cc"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/log.py",
+      "bytes": 2176,
+      "sha256": "4c31205ffbb9df6631200478fa430c29b1151c0cb5ae4c4b2eb3e8ff4c8591ad"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/spinner.py",
+      "bytes": 4681,
+      "sha256": "c89375a2e27c16b8bae501132bb3c1971b5c77d8e47792c69b7419639d5da3e1"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/storage.py",
+      "bytes": 14937,
+      "sha256": "50c95e3fc9975e142c6d8256fb4d73af7ba60e4f3d707f15d429694d5b748099"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tags.py",
+      "bytes": 2319,
+      "sha256": "e5f726f73e6df548d52cb917efc08fabc899b9db9eace6aebd64f9c0f46d46e3"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/__init__.py",
+      "bytes": 9320,
+      "sha256": "357921bd7d743906decf2270ece34b5bf082406ddf9b85468a9f821e7fe6b838"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/app.py",
+      "bytes": 57475,
+      "sha256": "8096806ce5bf6e920f46a2ea61361d181198404496def2101101aa935c02990e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/__init__.py",
+      "bytes": 11005,
+      "sha256": "d951890bf826f79d6bf809cca8fc7f22d768751cc163ed13e0359b0f59946192"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/backupcompatibility.py",
+      "bytes": 96847,
+      "sha256": "d35121eff5318425f2a22076ba064eb87c781db9800201a143cc781c18a1c2eb"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/dispvm.py",
+      "bytes": 20367,
+      "sha256": "0d62924219d6159437ce294249bb05a9bf14e3b80cb1990cf7a76482ed882b3c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/v3-firewall.xml",
+      "bytes": 399,
+      "sha256": "4f46ffc4025f77b55f7bbb2d2027b378b5cdcf092b2218b85fc0fe9a961f94f8"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/v3-qubes.xml",
+      "bytes": 9940,
+      "sha256": "ec7ac7b64ea97a5cb4aef4486e1b676ed3d1bc5ef5349072d5eb1319910513e7"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/v4-firewall.xml",
+      "bytes": 1182,
+      "sha256": "29218335801e098897e91171cb3df3b9cf945bf74e22b388872065b0ad09669e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/v4-qubes.xml",
+      "bytes": 27242,
+      "sha256": "4dbb5dbb95dc2ac7dab69e9f894ca59f4697d53b977c75ca0411b9846c62dbea"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/devices.py",
+      "bytes": 20678,
+      "sha256": "e05cd3519621afc6d3bcd7e9dce37a30aa3b91d45b6e9556fdda5412b91292d5"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/errors.py",
+      "bytes": 2681,
+      "sha256": "de4a9fc666eb35e36b1f41370360c5122c253956e024919095840e499b1408b0"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/events.py",
+      "bytes": 11415,
+      "sha256": "eca10ca17b04908e130904403911a94b0abfb96941985cdf644ed29085c8841d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/features.py",
+      "bytes": 3649,
+      "sha256": "16f92ac78e9c0ff12f6d845858a82f5d003a128fbbe0b5b65e72def096035692"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/firewall.py",
+      "bytes": 18416,
+      "sha256": "01de4f4abb46c2811bef03cf8231ca6257d7b5f92e765f2c2156c13f432c991c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/label.py",
+      "bytes": 3792,
+      "sha256": "bf798800f0a399121b3fdab653b285bb8486fa6b8c70a154099294fa5975b9d4"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/mock_app.py",
+      "bytes": 45241,
+      "sha256": "0cc1818737da7fd38f204b877df38287e83a715e3d3f42da70a02010b8a5626e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/storage.py",
+      "bytes": 13687,
+      "sha256": "e4c60b899663fac70d1046d5ffce8828b5214bf9eef8d460c30a890bb5fcc69e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tags.py",
+      "bytes": 4487,
+      "sha256": "3144fd7ad6a25c976ab6f574df7810a598e658b66ae0c41fd94c617a3ab4cd08"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/__init__.py",
+      "bytes": 2485,
+      "sha256": "ac4e18ea11a5a2ebf5b28cc0262f84a8207ae67233b4d8f2a609f412cb45ad30"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/init.py",
+      "bytes": 6421,
+      "sha256": "c1bb62cfc06896c91ed7f3c75a71cfa71bd5bce50f75255818ca05db3ae7da8e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qubes_prefs.py",
+      "bytes": 3452,
+      "sha256": "829a5b23f5643f3256798642fc5692abb49877f5dffa3b77d184afb654056e7b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_backup.py",
+      "bytes": 10894,
+      "sha256": "f9b8d32a6ae4e3f690c5ae4c725a39db44eca94f5707059b154011905141b801"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_backup_restore.py",
+      "bytes": 10154,
+      "sha256": "5c4502fd08ab5d79872d3b131c38f90634c407fc8013d1847751487d81d75bc2"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_check.py",
+      "bytes": 12317,
+      "sha256": "e3648816dcc88779a6d43d64b16242019577d9a1bc05a4256314a383a9b30e03"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_clone.py",
+      "bytes": 4369,
+      "sha256": "8f7790e0186db5af3529a992b3b621b72aa522e72ac1f1a4c66f0066a1023278"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_create.py",
+      "bytes": 14988,
+      "sha256": "928c575c8bf736f0bcb592707bdb142e48ce09586324e93611e0a84bb8a78660"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_device.py",
+      "bytes": 32795,
+      "sha256": "84b44eab2d5a8bfd022fcc5fa74363dac42732a7ad8d26e9d17404a77a7bd834"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_features.py",
+      "bytes": 3785,
+      "sha256": "5840a61400799e1614a59e81c407f7d9bc99584da53c3a5f9756ae9be766f00d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_firewall.py",
+      "bytes": 11568,
+      "sha256": "796ede736bbd08023ca7fdf1b726730a35571ab330b86957250dc26728544a4d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_kill.py",
+      "bytes": 3374,
+      "sha256": "4a88f00b5819277db24fb5a9403cb23f27a9f839e0b32b3b94411aebc776bc4a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_ls.py",
+      "bytes": 32829,
+      "sha256": "2200df2509761594adad0d64a812fa9b8ab0ce614adbd6060e36a4a0c7897c9d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_notes.py",
+      "bytes": 8485,
+      "sha256": "e0f954687e16b6760e22d3155f50fbc30a15a56ab405c28f715cb68351f992c0"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_pause.py",
+      "bytes": 3805,
+      "sha256": "b71a72857646477ef3a016bbccd0db59c8a68fec8d70f34093d8b6fb6f733d3b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_pool.py",
+      "bytes": 6083,
+      "sha256": "77ef182bc1db978984bca6f2f3a12123be1a07d80a99817628f770d9a6359c2b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_pool_legacy.py",
+      "bytes": 4892,
+      "sha256": "e5c3c341ba7da6aa16cfc12a1137fe80707dbc2adcc375b6bea336114ee58099"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_prefs.py",
+      "bytes": 8744,
+      "sha256": "b56d4416e37226e3ea9029b73069fef246e26baf080e9cc0441e8fcf42a97fb8"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_remove.py",
+      "bytes": 5259,
+      "sha256": "8124f9500a53dd5cf6c2a185de4a7e0a5d4a7ba05fa80c2da26240342875c1db"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_run.py",
+      "bytes": 58986,
+      "sha256": "7a1ca4dce213b78d1020dfe2a89dd7fbdb15c09a1108afbe77719129da2f800a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_service.py",
+      "bytes": 8496,
+      "sha256": "8ce3365e91afef8ed693dadb9b66833b8944bfd2ed72e85d647ebcbcde0059ab"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_shutdown.py",
+      "bytes": 10365,
+      "sha256": "1d886fa7c572e44f200b35c0a4a5cf4a08ac8c8a24347a453b674416bd3c5d72"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_start.py",
+      "bytes": 11676,
+      "sha256": "7a4343ee0f7bf0d4bef545b2db72fb6f282e4859d8740a6b21224d270dacd1e3"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_start_daemon.py",
+      "bytes": 41211,
+      "sha256": "489591a5f13d7e39b4cecbd313e886b4b08b398e504ab315cbd7dd6b7e5ce301"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_tags.py",
+      "bytes": 7336,
+      "sha256": "6eec16dfc5d636e6c990c42e910c56124f6d0471b851ae9f83a1c20aa3942387"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_template.py",
+      "bytes": 261119,
+      "sha256": "cd3f69b90a576420d070894c3566371fcc5170f7676316c29b357f7cf976112f"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_template_postprocess.py",
+      "bytes": 30762,
+      "sha256": "97e3a258c812e599d4c0b974d4afadfd9ddff82e8af508f3068f12b60379cc6e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_unpause.py",
+      "bytes": 5698,
+      "sha256": "9c0159925bc517092da9679155e1ba0f570f29f3254f8c14c69572d24d2925cd"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_volume.py",
+      "bytes": 28556,
+      "sha256": "cb5045670319e84067e73b328897dde42e695da890ede8a6ec73a6e4eb2e0154"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/utils.py",
+      "bytes": 6326,
+      "sha256": "ad5a58f9d263a917e80962062288520df90c0a62240c9393a3c3bbc2fed75cf6"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/__init__.py",
+      "bytes": 1186,
+      "sha256": "7b564416980961f194d22056ac20791f1ec0e3dc6ed5c7b847f54fd8f02c4d3c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/actions.py",
+      "bytes": 7515,
+      "sha256": "bef1a5efcfb924a8f0b3ac9b4d4f37d0d6ce119ab34bb9a601723c982904c857"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/dispvm.py",
+      "bytes": 4438,
+      "sha256": "0cddd8716bf57601df022541a94f283c983869a5014629497fb1a2c8796549f9"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/properties.py",
+      "bytes": 12199,
+      "sha256": "0c300c76107a001f21926d8a14f53a506ed8163730b3ab363dd1c30d6f2f9f36"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/storage.py",
+      "bytes": 1989,
+      "sha256": "f67fea7c30fbea17b85c7971e2ee48b9bb71de3f286125504bf0efd9c3dce784"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/__init__.py",
+      "bytes": 23372,
+      "sha256": "cdc8475935805b2dffe689099c995ea2c0f70a0504fc0463e49f85082269f86c"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/dochelpers.py",
+      "bytes": 11209,
+      "sha256": "221570c332f05630643bed5e00598b715b97a73cffb216e47461b52b1fdf7e05"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qubes_prefs.py",
+      "bytes": 1413,
+      "sha256": "28f580e76658654021e71535825e47f5de75f5322d19d65911ab0c67750a66c0"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_backup.py",
+      "bytes": 9481,
+      "sha256": "25fe0451426953a71c6850c5ad676196a259a70279cac719d81f03335ef69164"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_backup_restore.py",
+      "bytes": 12670,
+      "sha256": "ed9e8388e9304507afed9d878afc30b1d5d451a4da2fc968bbfa4a152ec5e127"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_check.py",
+      "bytes": 5722,
+      "sha256": "4b5ad09fa332ecdafa434d98ef2d1580583e4ffb1faebe6108c2b5724e801d54"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_clone.py",
+      "bytes": 2993,
+      "sha256": "309879a61e7c7578a3a088a9f665daf115b3126e740a47ef4508c4c1a522ff07"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_create.py",
+      "bytes": 7067,
+      "sha256": "76e9f7691e75505691b4e1c2ad10ad5ed36c9f5b0585e0c6efcacddbd1d51258"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_device.py",
+      "bytes": 25205,
+      "sha256": "742d143c4af725d3b23e85190201336ad08d65998e61e2d27f70e6ddf80f5137"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_features.py",
+      "bytes": 3066,
+      "sha256": "d00c014822e672ba3c2332ee27fba64ea37d95b926be5ba1f8ac70380c475b37"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_firewall.py",
+      "bytes": 7900,
+      "sha256": "93919833923eb32da659267da42509282b7b5df6c64cb35fa28e5f2187057467"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_kill.py",
+      "bytes": 1830,
+      "sha256": "21d74065b0d0534b734736c5caf4e1c3042fb65f4f5ee49a6cd6ffc8a1e30d5b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_ls.py",
+      "bytes": 30889,
+      "sha256": "0f768f5590790a2c110f417924522b3134fc25453f07cff4d13b59c01acd8f12"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_notes.py",
+      "bytes": 6629,
+      "sha256": "443ba50b7ebe7114f9f621ff6ad779903413c9b35c529d98c9ae74e9960a0c87"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_pause.py",
+      "bytes": 1862,
+      "sha256": "7f534a36d8d43fd77c3afd8c6a0ba967a82710793c45355ff1e1457f52325269"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_pool.py",
+      "bytes": 8287,
+      "sha256": "27a326f2552cd114d325b266661f01b544574b9b38238f634ee9432e2471241f"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_pool_legacy.py",
+      "bytes": 7638,
+      "sha256": "f99fae2f719d013ea709df04ff4d31e4ab07d5adfc7c5a59aabe897dd02758c3"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_prefs.py",
+      "bytes": 6027,
+      "sha256": "db5ebea4ae7e24750e865decff87ea834f3f6610a8aab271a21a643428e570ad"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_remove.py",
+      "bytes": 4241,
+      "sha256": "20f2b6e04326946860057ff96d5f86feaa7151242c11d34b07eaeb32dc75fc08"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_run.py",
+      "bytes": 15313,
+      "sha256": "bce6b532cdf8f20ac8f67703b84105b49ddb37201d344aaff24ec4786a2c60e3"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_service.py",
+      "bytes": 4328,
+      "sha256": "b8670c9accf0c9be5944f474fcf8e068280f410a1aaaab62d84e65bc6c01269b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_shutdown.py",
+      "bytes": 5989,
+      "sha256": "74c5e5673f8d7aa58eebb807e67b911954d37919009321a26d9157c35f950526"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_start.py",
+      "bytes": 7792,
+      "sha256": "cecb2de81a6648e1a837aa791433cb3b9e67d70df4af0303b7e135c4b6667de9"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_start_daemon.py",
+      "bytes": 42210,
+      "sha256": "9d4ba56dcf88fadff975283e276e7ba7ad03d122a4bc654c1b7c2d82627a189a"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_tags.py",
+      "bytes": 3333,
+      "sha256": "829dc9983a6ddea06a0ac81a6668a006b876f257c5b71e646a209cd8fc9244c4"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_template.py",
+      "bytes": 73912,
+      "sha256": "86c489a75832f5165cf0a92f4dac693a05f5c31d5430b6828ed9290d333a19fb"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_template_postprocess.py",
+      "bytes": 17572,
+      "sha256": "74b1e2d5eb89768e8a5926ac9a88da28bf34adcb8d3abff311770da8c39981f8"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_unpause.py",
+      "bytes": 1845,
+      "sha256": "a237d3df290585ae4d011b86728b194457c3de3c85c4cec504014d0002feec90"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_volume.py",
+      "bytes": 14212,
+      "sha256": "1d1d8c93437c20ea0e7268f0bcc824b40ef958e87234b826457e550cc912df9b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/xcffibhelpers.py",
+      "bytes": 4263,
+      "sha256": "f7d790bc4e9e8e3301dbcd753240589d91467ed7e382e7a1eb3acdd758263993"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/utils.py",
+      "bytes": 7015,
+      "sha256": "8a5c11770837a34e11c7c635190c1f36d375bf07db27acd424556eea03126401"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/vm/__init__.py",
+      "bytes": 18723,
+      "sha256": "743bb9038cca5d9dc9e1b630669e5ebcc57f88d857930c9e0d414c4ac02eb259"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/rpm_spec/qubes-core-admin-client.spec.in",
+      "bytes": 2536,
+      "sha256": "8ca244e3df671cebeaba5e6671a6d0295f82513de423890edac9a4a2722fe57f"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/run-tests",
+      "bytes": 439,
+      "sha256": "4bd85b828cdc50aec05ebb06d68e567e0a1981d517b79608b8304db75185238b"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/scripts/30-keyboard-layout-service.sh",
+      "bytes": 68,
+      "sha256": "5c5cc062b28a52f972d918304eb7d9f961518480d4cf782c568fe4c2a9ce9e53"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/scripts/qubes-guivm-session",
+      "bytes": 433,
+      "sha256": "219aa547ac4d1cd0ef46a7dccba0a6db02c0528e7106cfda7f63ee984ec6f98d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/scripts/qvm-console",
+      "bytes": 890,
+      "sha256": "b1c4d9f4539d7a05da6944fbe188e5b27e44d99d4d5cc99bfd060c7f1b9ae698"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/setup.py",
+      "bytes": 2045,
+      "sha256": "d2734d254a5aedbf1392334a8b817d63597dfda8a07565b66fc7ab0286c6ff6e"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/test-packages/.gitignore",
+      "bytes": 20,
+      "sha256": "feb30a33c9187328635dce9464272f1b69122b44721992c01e7dd110357ba11d"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/test-packages/dbus.py",
+      "bytes": 96,
+      "sha256": "b8fe9d4cf3b06925f4b07d46c79fb335f8407fb6ac1522b6ca88126fd30b3ae4"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/test-packages/qubesdb.py",
+      "bytes": 99,
+      "sha256": "3eb3d1a726f4ebb1758a94c60171084e58bb67f79d9125ad79f29414e6664ea8"
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/version",
+      "bytes": 7,
+      "sha256": "f81d4f0601038312b5ac1bf791d9549c3a6799c38b57ce021811da53ee341222"
+    }
+  ],
+  "symlinks_not_materialized": [
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-start-gui.rst",
+      "target": "qvm-start-daemon.rst",
+      "sha256": "3a0d62aa63fc0e41a1854ce4ead549915566a42a4238b674cd9ca5d1b689b710"
+    }
+  ],
+  "verification": {
+    "regular_files": 178,
+    "bytes": 2035854,
+    "rea_verified_files": 178,
+    "craft_verified_files": 178,
+    "craft_skipped": [
+      {
+        "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-start-gui.rst",
+        "reason": "symlink member is not a regular file"
+      }
+    ],
+    "rea_matches_archive": true,
+    "craft_materialized_files_match_archive": true
+  },
+  "python_syntax": [
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/conf.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/skel-manpage.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/__init__.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/app.py",
+      "status": "parsed",
+      "functions": 34,
+      "classes": 4,
+      "imports": 17
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/__init__.py",
+      "status": "parsed",
+      "functions": 6,
+      "classes": 2,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/core2.py",
+      "status": "parsed",
+      "functions": 11,
+      "classes": 2,
+      "imports": 10
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/core3.py",
+      "status": "parsed",
+      "functions": 9,
+      "classes": 2,
+      "imports": 9
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/dispvm.py",
+      "status": "parsed",
+      "functions": 17,
+      "classes": 1,
+      "imports": 15
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/backup/restore.py",
+      "status": "parsed",
+      "functions": 51,
+      "classes": 7,
+      "imports": 39
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/base.py",
+      "status": "parsed",
+      "functions": 27,
+      "classes": 2,
+      "imports": 1
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/config.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/device_protocol.py",
+      "status": "parsed",
+      "functions": 102,
+      "classes": 12,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/devices.py",
+      "status": "parsed",
+      "functions": 21,
+      "classes": 2,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/events/__init__.py",
+      "status": "parsed",
+      "functions": 10,
+      "classes": 1,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/events/utils.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 0,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/exc.py",
+      "status": "parsed",
+      "functions": 7,
+      "classes": 36,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/features.py",
+      "status": "parsed",
+      "functions": 8,
+      "classes": 1,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/firewall.py",
+      "status": "parsed",
+      "functions": 47,
+      "classes": 12,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/label.py",
+      "status": "parsed",
+      "functions": 8,
+      "classes": 1,
+      "imports": 1
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/log.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 0,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/spinner.py",
+      "status": "parsed",
+      "functions": 13,
+      "classes": 4,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/storage.py",
+      "status": "parsed",
+      "functions": 42,
+      "classes": 2,
+      "imports": 1
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tags.py",
+      "status": "parsed",
+      "functions": 7,
+      "classes": 1,
+      "imports": 1
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/__init__.py",
+      "status": "parsed",
+      "functions": 20,
+      "classes": 6,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/app.py",
+      "status": "parsed",
+      "functions": 75,
+      "classes": 4,
+      "imports": 12
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/__init__.py",
+      "status": "parsed",
+      "functions": 12,
+      "classes": 2,
+      "imports": 9
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/backupcompatibility.py",
+      "status": "parsed",
+      "functions": 40,
+      "classes": 6,
+      "imports": 20
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/backup/dispvm.py",
+      "status": "parsed",
+      "functions": 16,
+      "classes": 1,
+      "imports": 10
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/devices.py",
+      "status": "parsed",
+      "functions": 27,
+      "classes": 1,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/errors.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/events.py",
+      "status": "parsed",
+      "functions": 16,
+      "classes": 1,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/features.py",
+      "status": "parsed",
+      "functions": 9,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/firewall.py",
+      "status": "parsed",
+      "functions": 49,
+      "classes": 12,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/label.py",
+      "status": "parsed",
+      "functions": 8,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/mock_app.py",
+      "status": "parsed",
+      "functions": 37,
+      "classes": 12,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/storage.py",
+      "status": "parsed",
+      "functions": 41,
+      "classes": 3,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tags.py",
+      "status": "parsed",
+      "functions": 12,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/__init__.py",
+      "status": "parsed",
+      "functions": 10,
+      "classes": 3,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/init.py",
+      "status": "parsed",
+      "functions": 13,
+      "classes": 3,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qubes_prefs.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_backup.py",
+      "status": "parsed",
+      "functions": 11,
+      "classes": 1,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_backup_restore.py",
+      "status": "parsed",
+      "functions": 7,
+      "classes": 1,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_check.py",
+      "status": "parsed",
+      "functions": 16,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_clone.py",
+      "status": "parsed",
+      "functions": 6,
+      "classes": 1,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_create.py",
+      "status": "parsed",
+      "functions": 16,
+      "classes": 1,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_device.py",
+      "status": "parsed",
+      "functions": 38,
+      "classes": 1,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_features.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_firewall.py",
+      "status": "parsed",
+      "functions": 20,
+      "classes": 3,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_kill.py",
+      "status": "parsed",
+      "functions": 5,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_ls.py",
+      "status": "parsed",
+      "functions": 33,
+      "classes": 9,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_notes.py",
+      "status": "parsed",
+      "functions": 9,
+      "classes": 1,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_pause.py",
+      "status": "parsed",
+      "functions": 6,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_pool.py",
+      "status": "parsed",
+      "functions": 9,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_pool_legacy.py",
+      "status": "parsed",
+      "functions": 7,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_prefs.py",
+      "status": "parsed",
+      "functions": 11,
+      "classes": 1,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_remove.py",
+      "status": "parsed",
+      "functions": 3,
+      "classes": 1,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_run.py",
+      "status": "parsed",
+      "functions": 43,
+      "classes": 1,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_service.py",
+      "status": "parsed",
+      "functions": 12,
+      "classes": 1,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_shutdown.py",
+      "status": "parsed",
+      "functions": 10,
+      "classes": 1,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_start.py",
+      "status": "parsed",
+      "functions": 11,
+      "classes": 1,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_start_daemon.py",
+      "status": "parsed",
+      "functions": 31,
+      "classes": 1,
+      "imports": 12
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_tags.py",
+      "status": "parsed",
+      "functions": 11,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_template.py",
+      "status": "parsed",
+      "functions": 144,
+      "classes": 3,
+      "imports": 13
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_template_postprocess.py",
+      "status": "parsed",
+      "functions": 22,
+      "classes": 2,
+      "imports": 9
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_unpause.py",
+      "status": "parsed",
+      "functions": 7,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/tools/qvm_volume.py",
+      "status": "parsed",
+      "functions": 29,
+      "classes": 1,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/utils.py",
+      "status": "parsed",
+      "functions": 8,
+      "classes": 2,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/__init__.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 1,
+      "imports": 1
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/actions.py",
+      "status": "parsed",
+      "functions": 16,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/dispvm.py",
+      "status": "parsed",
+      "functions": 6,
+      "classes": 1,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/properties.py",
+      "status": "parsed",
+      "functions": 33,
+      "classes": 2,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tests/vm/storage.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 1,
+      "imports": 1
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/__init__.py",
+      "status": "parsed",
+      "functions": 32,
+      "classes": 13,
+      "imports": 13
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/dochelpers.py",
+      "status": "parsed",
+      "functions": 15,
+      "classes": 3,
+      "imports": 16
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qubes_prefs.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 0,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_backup.py",
+      "status": "parsed",
+      "functions": 3,
+      "classes": 0,
+      "imports": 10
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_backup_restore.py",
+      "status": "parsed",
+      "functions": 3,
+      "classes": 0,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_check.py",
+      "status": "parsed",
+      "functions": 6,
+      "classes": 2,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_clone.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_create.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_device.py",
+      "status": "parsed",
+      "functions": 24,
+      "classes": 2,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_features.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_firewall.py",
+      "status": "parsed",
+      "functions": 6,
+      "classes": 1,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_kill.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_ls.py",
+      "status": "parsed",
+      "functions": 37,
+      "classes": 6,
+      "imports": 11
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_notes.py",
+      "status": "parsed",
+      "functions": 3,
+      "classes": 1,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_pause.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_pool.py",
+      "status": "parsed",
+      "functions": 14,
+      "classes": 0,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_pool_legacy.py",
+      "status": "parsed",
+      "functions": 14,
+      "classes": 5,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_prefs.py",
+      "status": "parsed",
+      "functions": 3,
+      "classes": 0,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_remove.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_run.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 0,
+      "imports": 10
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_service.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 0,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_shutdown.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 0,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_start.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 1,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_start_daemon.py",
+      "status": "parsed",
+      "functions": 41,
+      "classes": 3,
+      "imports": 20
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_tags.py",
+      "status": "parsed",
+      "functions": 5,
+      "classes": 0,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_template.py",
+      "status": "parsed",
+      "functions": 53,
+      "classes": 7,
+      "imports": 32
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_template_postprocess.py",
+      "status": "parsed",
+      "functions": 12,
+      "classes": 0,
+      "imports": 12
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_unpause.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/qvm_volume.py",
+      "status": "parsed",
+      "functions": 20,
+      "classes": 1,
+      "imports": 9
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/tools/xcffibhelpers.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 5,
+      "imports": 3
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/utils.py",
+      "status": "parsed",
+      "functions": 15,
+      "classes": 1,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/qubesadmin/vm/__init__.py",
+      "status": "parsed",
+      "functions": 43,
+      "classes": 3,
+      "imports": 12
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/setup.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 1,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/test-packages/dbus.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 3,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/test-packages/qubesdb.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 2,
+      "imports": 0
+    }
+  ],
+  "craft_source_import": {
+    "coverage": {
+      "examined": 176,
+      "status": "complete"
+    },
+    "ignored": 0,
+    "truncated": false,
+    "languages": {
+      "markdown": 1,
+      "other": 68,
+      "python": 107
+    }
+  },
+  "tool_evidence": [
+    {
+      "file": "rea-qubes-core-admin-client-extract.json",
+      "sha256": "3ec39d3153fcfe49cac4481ef3c444b09706b518163affe24074c8d64e191301"
+    },
+    {
+      "file": "craft-qubes-core-admin-client-extract.json",
+      "sha256": "0637763afff69d65f4648dc2ad79b0a9611a8c51f35a3caac13db8d01cd5efad"
+    },
+    {
+      "file": "craft-qubes-core-admin-client-source.json",
+      "sha256": "48628c3dd804d2606dd529d1801925bb9ebd3b7c284d1dbf7fc8350ea0397310"
+    }
+  ]
+}

@@ -106,6 +106,7 @@ Registra commit, branch e alterações locais, sem executar código do projeto o
 
 ## Pesquisa e implementação
 
+- [Qubes OS: fontes oficiais, extração e limites de cobertura](docs/research/qubes-os.md)
 - [VS Code: artefatos oficiais e arquitetura](docs/research/vscode.md)
 - [Fonte pública VS Code por referência fixada](references/README.md)
 - [Claude Duet: investigação pública e requisitos](docs/research/claude-duet.md)

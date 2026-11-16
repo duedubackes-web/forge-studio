@@ -1,3 +1,15 @@
 [submodule "references/vscode"]
 	path = references/vscode
 	url = https://github.com/microsoft/vscode.git
+
+[submodule "references/qubes-core-admin"]
+	path = references/qubes-core-admin
+	url = https://github.com/QubesOS/qubes-core-admin.git
+
+[submodule "references/qubes-core-qrexec"]
+	path = references/qubes-core-qrexec
+	url = https://github.com/QubesOS/qubes-core-qrexec.git
+
+[submodule "references/qubes-core-admin-client"]
+	path = references/qubes-core-admin-client
+	url = https://github.com/QubesOS/qubes-core-admin-client.git

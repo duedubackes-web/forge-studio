@@ -1,0 +1,1142 @@
+{
+  "source": {
+    "repo": "qubes-core-qrexec",
+    "branch": "release4.3",
+    "commit": "205db68abd6d89dff1bc03bce8ce0c88749b7248",
+    "url": "https://codeload.github.com/QubesOS/qubes-core-qrexec/zip/205db68abd6d89dff1bc03bce8ce0c88749b7248",
+    "bytes": 840084,
+    "sha256": "6c7fd6a41726240328956748c42c70519b9f38880500c77dfc913ed9ade5afc6"
+  },
+  "files": [
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/.coveragerc",
+      "bytes": 172,
+      "sha256": "b70c49cc277238e135ce02508099bc599f229fde12eb03bcbd9b18a443d70bca"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/.gitignore",
+      "bytes": 341,
+      "sha256": "865dff251058c23dd2206c52e069bcc4cda949152434eea0d7bad066cb60c246"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/.gitlab-ci.yml",
+      "bytes": 1496,
+      "sha256": "57a2c0bd395b32443ac9aab2c355091a4ae5faa6f525abb8c2331a3ebcee6996"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/.pylintrc",
+      "bytes": 11438,
+      "sha256": "37c2148c85e9d73b92c49517d6071bb79afb7a7c75a53e6fbe820b9e831e86c6"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/.qubesbuilder",
+      "bytes": 257,
+      "sha256": "1dcd791de7929b4559be8a2bb5a93413cc42f31253b337481fa73089ff30e640"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/.readthedocs.yaml",
+      "bytes": 272,
+      "sha256": "5811dd64588624406bee465ae07ab97db2ef330efcc5a5653ed7312188036047"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/Makefile",
+      "bytes": 3305,
+      "sha256": "1612602346805e2fb0cb2befda7615d2e903e2cc82ef2a2799c0d53edcdf984f"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/Makefile.builder",
+      "bytes": 253,
+      "sha256": "9fcc7de07e3d885a8fd199d621c4291f2fcd6dfdbc49e613543794a2244c96e8"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/README.md",
+      "bytes": 338,
+      "sha256": "ad7e6351ad155612859caa7a3195e3d8be1a45fede965914023477c6fd669798"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/Makefile",
+      "bytes": 2374,
+      "sha256": "1233fb797d3f66d4eec72cae3a07d4173c62b55fa8ab3c687b87c12b7e9139d8"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec-agent-data.c",
+      "bytes": 12786,
+      "sha256": "aa54ff93092b34d9c0840b0d73a1cf82b2d01561ab60f7a5cfae1feb8d2798ca"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec-agent.c",
+      "bytes": 36266,
+      "sha256": "a6cc42ec6b7323dabe4adc2f01caa3891c5482c005b9ecc3c61869b747ee3579"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec-agent.h",
+      "bytes": 2011,
+      "sha256": "b5eec80b2892e19fdb14aefc7b29fe8ab22c6be2959408a9a317f66d609de81b"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec-client-vm.c",
+      "bytes": 11951,
+      "sha256": "d4e4b8307c4fbbf2e438edc066f59c1ada8f0eea90b41d7f41613585892195b7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec-client-vm.rst",
+      "bytes": 2960,
+      "sha256": "fe60eed7b9ed3c81a745bf9add35f377f9ca1d445f46fe381162887df24af6ae"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec-fork-server.c",
+      "bytes": 4345,
+      "sha256": "d0d595d1231cba66c03a65207a88a3df026c97a336c556ec5eca209914762426"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec.pam",
+      "bytes": 389,
+      "sha256": "7e6ee68f24d013b8954c8bc4d7f25de2400977ee537c6cc0f5c1ccf99f0b1267"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec.pam.archlinux",
+      "bytes": 376,
+      "sha256": "40bbcc874bc7ca010ffebc33031b4943b9608fbab314ef113192de8fb8ae3ed6"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec.pam.debian",
+      "bytes": 294,
+      "sha256": "8c1fa465ce9bf6fd9790bb598d0e4ad379a908e64581adb8098c899224630541"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/agent/qrexec.pam.gentoo",
+      "bytes": 464,
+      "sha256": "6cc711d42a90154b8813ed5bc740e77fe977eda736aab7256ef7bb696f6b727b"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/archlinux/PKGBUILD.in",
+      "bytes": 1205,
+      "sha256": "9e8026501e98fcf9de35aac9f83eaf53a42bdcab4fb665df2ed15b3b4824209d"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/archlinux/PKGBUILD.install",
+      "bytes": 308,
+      "sha256": "4f99094f7c7326b46f44c205a330aae0a7a622fecbe0de554cf81b2465d750a1"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/ci/Dockerfile",
+      "bytes": 494,
+      "sha256": "3012a67b9494a5a5c008127b9f15acfaeb410250b26ea4fc06b27609240f6d80"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/ci/codecov-keys.asc",
+      "bytes": 3187,
+      "sha256": "d56942c32a1bb70af75bf972302b6114049fb59cb76193fac349bb9b587b60c2"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/ci/codecov-wrapper",
+      "bytes": 793,
+      "sha256": "f4c4dc867b08001a635e23cbba7cf9959848cee727d84259df8ccf18b6760da8"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/ci/doc-requirements.txt",
+      "bytes": 13,
+      "sha256": "ae6712b8455aa86fcadeea0362f574310bb6c76f4b4af515fd2c1897ede1fe50"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/ci/requirements.txt",
+      "bytes": 201,
+      "sha256": "d9f9615c0ef253dfa7432fcd585f1230d4c24c0ab267cc2ba92cf5b1fa456fb0"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/daemon/Makefile",
+      "bytes": 1139,
+      "sha256": "1bc4dc934242a693713fd9fa1bcc9689f9c9505db064a6fb7106408524f793b3"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/daemon/README.rpc",
+      "bytes": 2674,
+      "sha256": "6852ff96264a873ce6db5146464a92044c555c2a43119bfb52d6a50a13ac6b21"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/daemon/qrexec-client.c",
+      "bytes": 16301,
+      "sha256": "d791e29ef06b6894399bef2a552028227cfadf149177dd907a46a46eceb3bd6e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/daemon/qrexec-daemon-common.c",
+      "bytes": 18637,
+      "sha256": "519d3b2aa5b13934b4b6f252c035edab8f3e723638c1c61b561686e7f262bdd3"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/daemon/qrexec-daemon-common.h",
+      "bytes": 6216,
+      "sha256": "7449b9c9b9fe740b3262c830dc389b4342ef3699cfe6bbe2096bc015f5cafc6c"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/daemon/qrexec-daemon.c",
+      "bytes": 62436,
+      "sha256": "3c881c57146518221e221776b8c205a0ad1c383d744c693140a4b2f6f4d71e95"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/changelog",
+      "bytes": 42477,
+      "sha256": "b6af86d7daf4bc66a313eeea1a73449c9b6c2e3413f5e910ffa2216d26eaac92"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/compat",
+      "bytes": 3,
+      "sha256": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/control",
+      "bytes": 1815,
+      "sha256": "ed42e5ce589c26e310034afac31a59f9d06ec52daef9374fcfd8ea9cdccafc82"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/copyright",
+      "bytes": 1839,
+      "sha256": "697578622944ffb67d258102586e7326ce5a8c17c9bd17d4028fed086fa82b5d"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/libqrexec-utils-dev.install",
+      "bytes": 78,
+      "sha256": "649d89005597ed7bc23224a83eb5bad5d346f63f46667e32fa1ec94bef93f232"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/libqrexec-utils4.install",
+      "bytes": 30,
+      "sha256": "3ef2e55955765fad7b7531769601a7ad5ddf0be975dc0ced213268e9e83bea8f"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/libqrexec-utils4.shlibs",
+      "bytes": 46,
+      "sha256": "b47862026b20068c28c637e5b794c18b4833a0a21e836c0e0703590dcb2d22f5"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/python3-qrexec.install",
+      "bytes": 76,
+      "sha256": "68fd3f9c247d0ac00b48536c50e28f63c4557b9666ad47bbfea57d0a066dbf02"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/qubes-core-qrexec.install",
+      "bytes": 795,
+      "sha256": "cdc762d26415c3fc9355a4ff9d5b4357781484a396fc064a208dbf1febd5f45e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/rules",
+      "bytes": 829,
+      "sha256": "79b19d83742d6c9580bd7166f5ec1aac5df20a4ace3bc78502107c35074d7c3b"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/debian/source/format",
+      "bytes": 12,
+      "sha256": "1be7080d72e6b566df3e236ce2c55efdfbbb8fa1c972d825e5b672ff8773be1a"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/.gitignore",
+      "bytes": 8,
+      "sha256": "adef60aac2dd6bb6a514055a6cec27bebcd2f02848d2e4f15f5171cecbeac841"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/Makefile",
+      "bytes": 734,
+      "sha256": "6e5752d861c12d489b6466a00410dc7f2d6b4ff7c505f54f807cd25a6fde380c"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/_static/general.mermaid",
+      "bytes": 915,
+      "sha256": "b714870dde7007e70b85c4dfff197f21af9518c84a5f24abe2904bbd70122795"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/_static/general.png",
+      "bytes": 432877,
+      "sha256": "f31be9402e23a67128aa268411e624a076b62eb26b6cb1589399469e605a54c0"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/_static/particular.mermaid",
+      "bytes": 737,
+      "sha256": "674c6c178a21272a7ef7be9ba401ad5e6a73ca0f0dfcfc379d1c183a334052c7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/_static/particular.png",
+      "bytes": 281870,
+      "sha256": "c99826d917ab037a670ef5031fa3c663eeae24ea8054b31ceb87d314d6b04c4d"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/conf.py",
+      "bytes": 5762,
+      "sha256": "9c3f43aa8d62c53546f92623e6971ceaba2f2ae7650ff417e444fa676f4d9c33"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/execution.rst",
+      "bytes": 13140,
+      "sha256": "0e994701d9cd3c889b2e9610243227de9bf3d9bb738e3bc43fcae5ac9449e4c3"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/index.rst",
+      "bytes": 429,
+      "sha256": "f58f767472c9b16ebf1df643fe6fd783955fef7178e33fe2e5f3bdc7d11cc7e3"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/manpages/index.rst",
+      "bytes": 173,
+      "sha256": "8c0be4c9f43220bb7abff666cca4833f1f2831b87400c6681f0df1784e2cede9"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/manpages/qrexec-client-vm.rst",
+      "bytes": 46,
+      "sha256": "feeaf25b95d47a834f854a51d5751578c051e76a8f6a9326738c1ee56052ebff"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/manpages/qrexec-policy-graph.rst",
+      "bytes": 2230,
+      "sha256": "ce0b6e98468ddadb204c96d091f5d110cb00e79fc085cb6486912f31b9377c88"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/multifile-policy.markdown",
+      "bytes": 7555,
+      "sha256": "20731b9ed3b83b83aa295a5299af43958372b8be0515db40229482d3c89a0aec"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-exc.rst",
+      "bytes": 133,
+      "sha256": "db1d3bd08cc7d5855957936ba5408072852565d109d23855dee1d5d1f9232fb6"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-policy-agent.md",
+      "bytes": 1422,
+      "sha256": "1d9fd0b7bf102b3daece35e810ffdf762070fb19fb80c92e02e11062e4be0119"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-policy-daemon.rst",
+      "bytes": 1265,
+      "sha256": "388abd3d3b310694d395b26e02c26b4619b0b647aa478a9194832ae6cdcca573"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-policy-parser.rst",
+      "bytes": 3698,
+      "sha256": "c0d370890693331ced79d1e187c333b88e1f7ea6e65725ef0fda3a77485b850c"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-policy-parser_compat.rst",
+      "bytes": 177,
+      "sha256": "425fb1654afa0b3d2ae38f6aab72c257e49ff43a6730f97d9ff4b0c3a53ad647"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-policy.rst",
+      "bytes": 3969,
+      "sha256": "decbc77d1ea04086a74ff97bc44292514c9decbe68419e5ec022a466efb61aa4"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-remotevm.rst",
+      "bytes": 9303,
+      "sha256": "6d1c9ec30db9ab1bf2219b96afa3b67b27c15b0c4b471af6dc75929daf82ee07"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec-utils.rst",
+      "bytes": 111,
+      "sha256": "a339a91d01ce11d478d4f7f36f02ce1cec87e1bb4efaf20db4bb5253c526aea1"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/qrexec.rst",
+      "bytes": 136,
+      "sha256": "9f67e25fec966ac88b3f97f7f231fd0154ec304b2ee0a3f5fb75b703953e705c"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/.gitignore",
+      "bytes": 36,
+      "sha256": "c98d22b8997ce6cd5612fee2f5af240124d6351e1ff3e01d0b32db9b1817513d"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/Makefile",
+      "bytes": 1709,
+      "sha256": "1b765e6127c641dff0a43bdcdf233528b5caf1eb1db6f866582ac62d7def41d7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/fuzz.c",
+      "bytes": 3606,
+      "sha256": "01d49a155f630f5b7dd5a3fd27531d87e9bc86d22e85a2a1d59976c3e86cb4a4"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/fuzz.h",
+      "bytes": 1439,
+      "sha256": "86c67ddf315d57714e6b6815124a9ed306086a46c65e61b5cbfce37514aafe2e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/gen-seed-corpus",
+      "bytes": 1282,
+      "sha256": "e248a7b38378bb5af0c78647be1309f52e0ae62d6635bb2de3d6653b7e1f85e1"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/libvchan.h",
+      "bytes": 1952,
+      "sha256": "bddb997011b4db1b2847630020cbbb3ebf1b31694cc83f7f190913f81605d06a"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/mock-fuzz.h",
+      "bytes": 910,
+      "sha256": "3cc5a8493bf166ed3df68273e385adc9137ea7fdeb2466a4351e22fb465d72ed"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/qrexec_daemon_fuzzer.c",
+      "bytes": 860,
+      "sha256": "b3ca59e496c3893ba3c3db3a99f201f9a52542d4de790070dafee9db4dff2892"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/qrexec_remote_fuzzer.c",
+      "bytes": 1181,
+      "sha256": "d0629e1f9e669fb52048d447e850274b36c0f1d1372ebf474cec7c8fdc616ce8"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/qubesrpc_parse_fuzzer.c",
+      "bytes": 1799,
+      "sha256": "00ec23f44b88d652a7da956beb03f039c64beb7a24239658bd42488850224794"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/fuzz/qubesrpc_parse_fuzzer.options",
+      "bytes": 27,
+      "sha256": "bd431edbe81d977e47711b72abb5938afe5b893495c3cfa8b71ed53f624bfb06"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/lib/qrexec-policy-agent-autostart",
+      "bytes": 188,
+      "sha256": "20076cdcab7122fb764164cf87c900b26f674a4afe0a97343c58702d2faff59c"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/lib/qubes-rpc-multiplexer",
+      "bytes": 2240,
+      "sha256": "a47497fe699357a23c861f45e80323f29916c764caf1f08b5029bb09c767a4f1"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/Makefile",
+      "bytes": 1530,
+      "sha256": "86085c48d90fdaf7cea3870a15d232ed1be6f3dfd55986a6551f806eef7ea4c9"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/buffer.c",
+      "bytes": 3258,
+      "sha256": "421101d0ad9742ecf40918b70ef1200c3d4a7f161f7ee4b58f6b60153d7c8ff7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/exec.c",
+      "bytes": 32935,
+      "sha256": "bada81af1766a66f7ab9b38ccc7aa0141749a90030a79664cea940ea30a366f0"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/ioall.c",
+      "bytes": 9741,
+      "sha256": "8fdfc3551ae86444ed5e1f972e5f3fa3ae8a8cfaeb8e50c055ad35a87827a463"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/ioall.h",
+      "bytes": 182,
+      "sha256": "aa0b23ba7111c96d679ec62e9a7e2790d0104a31a069dd790a7162cc1856bf21"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/libqrexec-utils.h",
+      "bytes": 16644,
+      "sha256": "0a73d36db0117c5e8f2a88849e0d95cfaa4396cb0d51f25ce0783dd926d2767f"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/log.c",
+      "bytes": 2987,
+      "sha256": "19eeb25f684851c6557e9b2f29d7c49cde5eb40120f1abe532765e2e76d5a872"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/open_logger.c",
+      "bytes": 908,
+      "sha256": "2bc7e80843d6d8c307582287b6d73ac131d677293e6437649279dcbbb8fbfbf7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/private.h",
+      "bytes": 324,
+      "sha256": "4aada77956abf90a3b3762ca7a58e1cd3488164bbc19e6075d8ac0e641eaee93"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/process_io.c",
+      "bytes": 15113,
+      "sha256": "2eda2d146230d1cae33a30423c801a2524c0991c834e15f10e8b224d9faa917e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/qrexec.h",
+      "bytes": 6716,
+      "sha256": "c3f0251c0bee4cd3127f4d60b8e15858e0643f91feb7322e3a9860b5ff6f8101"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/remote.c",
+      "bytes": 7517,
+      "sha256": "4a85f25b0458d619a75410963f596594132c430c48b7a2c5c8e71ed48b00ae13"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/remote.h",
+      "bytes": 3365,
+      "sha256": "53c09e2ea614b5c675d99cf7b7acdf7fa6c7f9aa65baf779b7d21bfc1dd01d6f"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/replace.c",
+      "bytes": 1417,
+      "sha256": "04bcdb946c06f98297242929afaa63a16fdae5e3ed158f7683d4bbb40e9317e3"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/toml.c",
+      "bytes": 11520,
+      "sha256": "3dc1993c93895027b21056b20b0da0811241a696f847536f24cd3153719f02d5"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/txrx-vchan.c",
+      "bytes": 2165,
+      "sha256": "8938a2ce7a2c7b9f7567ec8ce194158309a218fcabe90ba236c23393c0bf212d"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/unix-server.c",
+      "bytes": 2053,
+      "sha256": "b2710d7617d6959ead1fb0c5abf3f37c7938fe9df069336018043239e4561e99"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/vchan_timeout.c",
+      "bytes": 2372,
+      "sha256": "3372564552ffc9c2cd39952741b93d5495d13fe6a831cb3499d823d72d3bbfbb"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/libqrexec/write-stdin.c",
+      "bytes": 2668,
+      "sha256": "c9171210dd92d5b86177b94a904b765c408258c7ad2af817d16119196c2ff371"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/mypy.ini",
+      "bytes": 53,
+      "sha256": "7a4f93e1fa42e7420d5c16baf5a6c78cbf74a40c3239a0af4b9227cb1830fadb"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/policy-agent-extra/qrexec-policy-agent.desktop",
+      "bytes": 195,
+      "sha256": "9452f9ae3ada6744a6a97ad1ad2301a97e7d3a7a91f274236bfda945e8d68e54"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/policy.d/35-compat.policy",
+      "bytes": 674,
+      "sha256": "608c760ecda30c8cf37113a67722d54a22b804f3f6bed875b06a94dd067bafbc"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/policy.d/90-admin-policy-default.policy",
+      "bytes": 1197,
+      "sha256": "006116b2f32fbbb64fc6792b7ed404cd74a25332be96d44cb0f04c9f8810d0fa"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/policy.d/README",
+      "bytes": 185,
+      "sha256": "f0ef2e8a174c7fe554ed1e5bae70ad81273224c4b19e8a3e02089fad4594f821"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/policy.d/include/admin-policy-ro",
+      "bytes": 325,
+      "sha256": "caee0f5f8281c1e0de2a3640fc6c1758d6bbbad1a1dc8e772147a6d7870b67f6"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/policy.d/include/admin-policy-rwx",
+      "bytes": 262,
+      "sha256": "7c9f49171686fe318ffba3a281fa3b10df97051a32fe7494b968213adad78db3"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/__init__.py",
+      "bytes": 1686,
+      "sha256": "9590ba0c2c9e8bed1dad72f7874f9af54be9a5be5ad891a91f4cf0859ece7f16"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/client.py",
+      "bytes": 3919,
+      "sha256": "f38a5aac80c35baef7a241508e5695d75b47d51f1d88b1a60ed7bcdd6dd76a73"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/exc.py",
+      "bytes": 2157,
+      "sha256": "41bc7bfae33a29ff21f6a19205c18a376196206bc94c87c8113e461a28ca2ad1"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/glade/RPCConfirmationWindow.glade",
+      "bytes": 18195,
+      "sha256": "c0b7e1588014911d27c2e067eeb076bae3f18155dc721c189a0d02c5dba599e7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/admin.py",
+      "bytes": 10408,
+      "sha256": "c6de0391b79f9f1d03417164e55de86eb5c8d54a01f985db64df551856b6246e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/admin_client.py",
+      "bytes": 2566,
+      "sha256": "acdeafe9d2be5fd9abe7b2d2c3e88f18f41eb14dc687130baaef01ed98e3b962"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/parser.py",
+      "bytes": 78260,
+      "sha256": "15d9cecb504900114af68238cafdd87b506dd9f16862da8a6944967efac35e3e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/parser_compat.py",
+      "bytes": 6856,
+      "sha256": "00ec5e404b2c7abe47e25649dd73661b2a28d9a6aaa2bdfeadd414cf364b0b70"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/utils.py",
+      "bytes": 3821,
+      "sha256": "034c7d0811a534ca7f34d7d796316686397a57c0cda92c56c18d9281a0a04b1c"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/server.py",
+      "bytes": 3860,
+      "sha256": "ccbb4e60be32cf919da9bb71a115946866e7feada122a1deff670f0d146537f7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/cli.py",
+      "bytes": 14686,
+      "sha256": "83e526977be7418dfce588d9c8a4de633c5a2d7dd2942e09856f0ace0b96f3a6"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/gtkhelpers.py",
+      "bytes": 15996,
+      "sha256": "dc212e8e09bcabb853edc7caf4ce412a10d59ffc7e7e18ebc89dd7b30439d355"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_admin.py",
+      "bytes": 8163,
+      "sha256": "0927bd416bfa3bf31502282a63579a2b3f59a1c1dd50f61105830a4977e53d52"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_cache.py",
+      "bytes": 4883,
+      "sha256": "6200ac95979e02da5f01736d255c475c9b7d1941263c6b5fa50b04edcc577fbd"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_graph.py",
+      "bytes": 9732,
+      "sha256": "ab933cff457ad3ece9b1759c7427b11d8223ceb78538649a6587c74063ba12f7"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_parser.py",
+      "bytes": 102637,
+      "sha256": "75e306be5530e3f20e561b09f80d9cec4af3b8c1ef435d87261d6edb622cb3a9"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/qrexec_legacy_convert.py",
+      "bytes": 16830,
+      "sha256": "ec767ee59802987278dfb5ffe659e258773858cfd5a49662d7f6efe662530162"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/qrexec_policy_daemon.py",
+      "bytes": 18804,
+      "sha256": "c72a58ba0cbe7efecff2e5bbffe3afb330d4ecab3807ea232ab9c02a7c76abbd"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/rpcconfirmation.py",
+      "bytes": 14907,
+      "sha256": "9eae8290bc700e0fad1249f1b3cb8405018040ef5e1123402ccd1f1686739552"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/server.py",
+      "bytes": 2849,
+      "sha256": "412c8bb536b3af6a49dcd041668711b5d60f432c4beb8f55db2a3bdbf8295b36"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/.gitignore",
+      "bytes": 6,
+      "sha256": "094c25031dcfe5c288666671bc2012866293b3797ea53c796af798bda4c32f01"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/agent.py",
+      "bytes": 65131,
+      "sha256": "90aa33e41a599520c65362108aff7afd874317a5465d5665e7b384efec0074a0"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/daemon.py",
+      "bytes": 48291,
+      "sha256": "1be2b94d2ea2ef6e653dbe5352c483901ab01bd711dc466d9113134e4cf16493"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/qrexec.py",
+      "bytes": 5334,
+      "sha256": "effefad0232d12b821faf962429027091cc5a944e5497c2264e302e00a569fec"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/util.py",
+      "bytes": 1623,
+      "sha256": "769a633fc46bdc6c7e40f4963afe773aa2697f9d784294ca9b884bf281be0381"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_legacy_convert.py",
+      "bytes": 11843,
+      "sha256": "51ae7d05e7b6d635895cedb08e621b094b3672feebcc5f9f571811bb290ab49e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_agent.py",
+      "bytes": 21997,
+      "sha256": "2b923f28cb95ea86ad5c0cb9182d71c369672e01fa05205eb6c4a1612d9591e9"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_daemon.py",
+      "bytes": 11421,
+      "sha256": "dfbd13d0d107bd6ceb64e0b776325771d612de2fb7bccd8e7235cae63e906aeb"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_exec.py",
+      "bytes": 13442,
+      "sha256": "b3501a1415c1db97e9df73f57119a7fdbd5d43211c9a5717ad24d7c7e5a170e5"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_graph.py",
+      "bytes": 6622,
+      "sha256": "70313f35a3b13f1972a292058f181f09b7ee1e78fd412c497450256ca5a8bffd"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_restore.py",
+      "bytes": 2656,
+      "sha256": "873698856ad9d1d203096d9fe9a55c72c66e98b0f75f0fb44a70df80b418ab06"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy.py",
+      "bytes": 4027,
+      "sha256": "3304c85240269434d875c01c12ac1b1a0d06cd0e141259668d96ca7917cabcb1"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy_admin.py",
+      "bytes": 2246,
+      "sha256": "eb47b93e9a38318f9778cfb4b761326d0c29cab9b2b040d38d9092761588e9c6"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy_editor.py",
+      "bytes": 5992,
+      "sha256": "63df599170c80b4052774b22befae84617ee92333b43158f19983aff5755b182"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy_lint.py",
+      "bytes": 5667,
+      "sha256": "0adcff6ee55ba6ba5111e30f4b60264ee2bb2237e56409df11afeaf8c9951525"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/utils.py",
+      "bytes": 5967,
+      "sha256": "2e7f7006c96d23a138f33402bcaf56583d6fad76a230ef47bd885ed79c9f5c97"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qubes-rpc-config/README",
+      "bytes": 3478,
+      "sha256": "00f6dc0a02f4ea0029f3aa87e9d3e49b1ae4c78836846d09b837a7a682046916"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qubes-rpc-dom0/policy.RegisterArgument",
+      "bytes": 5221,
+      "sha256": "de630d5ae33884c6033f51297439e0e19aa21579d102aa1de8a95fb236339085"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qubes-rpc-dom0/qubes.WaitForSession",
+      "bytes": 920,
+      "sha256": "e5a46d7d20741a55ede252a00026700b4b263ea6c64df373f95413291a5f438e"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/rpm_spec/qubes-qrexec-dom0.spec.in",
+      "bytes": 3889,
+      "sha256": "950ae41cde55d920a00ed188eef75753e3ebbf0a951354ff2a740198e2c1433b"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/rpm_spec/qubes-qrexec-vm.spec.in",
+      "bytes": 4128,
+      "sha256": "cc8ce56d5a53e93e6f47256a528a1dac118cec2668bc661d77a89cae94ccf182"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/rpm_spec/qubes-qrexec.spec.in",
+      "bytes": 7055,
+      "sha256": "1ecf35c41f5e564036c9d3795cd66d2e3ec831bb5ea554fc59d8694d6c1b0437"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/run-tests",
+      "bytes": 1344,
+      "sha256": "6500f3499cc03f19e896c18707366e972ed5832910105eb846a86af3c69d2636"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/selinux/qubes-core-qrexec.fc",
+      "bytes": 355,
+      "sha256": "600e264cceefa60f10e68d2aa6e9248d85b1d983f1ac6b946282c686254b37d4"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/selinux/qubes-core-qrexec.if",
+      "bytes": 850,
+      "sha256": "e56aae8dcafb17a4ad8a474f815630eb6c696a5714fa8adbb216981374f016d2"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/selinux/qubes-core-qrexec.te",
+      "bytes": 3306,
+      "sha256": "0eb6c97811ab802ae2cb412ebf0dc553662731a8b3210f2aa5a7f2e90458afb5"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/setup.py",
+      "bytes": 2032,
+      "sha256": "c381e43990e2341adb5080b089e4e078249b069df9e481bb42af2469a11fe042"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/systemd/qrexec-volatile-config.conf",
+      "bytes": 73,
+      "sha256": "232d5b48ba34fbfe43a573fe484cff01765c1135ea088ca146053cff39c3c41c"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/systemd/qrexec.conf",
+      "bytes": 76,
+      "sha256": "0dccb9da44b39993fd6e82e8703b606b0fd00366e95ebd2b2b867db088f9ea08"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/systemd/qubes-qrexec-agent.service",
+      "bytes": 385,
+      "sha256": "beeb9cdbb662bc5887e6ebbdac2ac556d649643e717984a6be18801aade15bef"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/systemd/qubes-qrexec-policy-daemon.service",
+      "bytes": 173,
+      "sha256": "bffb10200543db61a7cfc5aba87a758a061de139609ff1f3152073ddab587ed9"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/version",
+      "bytes": 7,
+      "sha256": "501dd4c22eb14c3b48483ba04ae47c114fb79724142472294aea70ab05bcdeb1"
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/vim/syntax/qubespolicy.vim",
+      "bytes": 1427,
+      "sha256": "f9cf36fd2225cd2ac6e8871e1d380de866e82bfcb868f959f2c5fb219b80a822"
+    }
+  ],
+  "symlinks_not_materialized": [],
+  "verification": {
+    "regular_files": 162,
+    "bytes": 1752116,
+    "rea_verified_files": 162,
+    "craft_verified_files": 162,
+    "craft_skipped": [],
+    "rea_matches_archive": true,
+    "craft_materialized_files_match_archive": true
+  },
+  "python_syntax": [
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/doc/conf.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/__init__.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/client.py",
+      "status": "parsed",
+      "functions": 3,
+      "classes": 0,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/exc.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 5,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/__init__.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/admin.py",
+      "status": "parsed",
+      "functions": 23,
+      "classes": 3,
+      "imports": 12
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/admin_client.py",
+      "status": "parsed",
+      "functions": 10,
+      "classes": 1,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/parser.py",
+      "status": "parsed",
+      "functions": 116,
+      "classes": 37,
+      "imports": 16
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/parser_compat.py",
+      "status": "parsed",
+      "functions": 17,
+      "classes": 4,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/policy/utils.py",
+      "status": "parsed",
+      "functions": 10,
+      "classes": 2,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/server.py",
+      "status": "parsed",
+      "functions": 8,
+      "classes": 1,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/__init__.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/cli.py",
+      "status": "parsed",
+      "functions": 31,
+      "classes": 1,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/gtkhelpers.py",
+      "status": "parsed",
+      "functions": 38,
+      "classes": 7,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_admin.py",
+      "status": "parsed",
+      "functions": 11,
+      "classes": 0,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_cache.py",
+      "status": "parsed",
+      "functions": 9,
+      "classes": 1,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_graph.py",
+      "status": "parsed",
+      "functions": 9,
+      "classes": 0,
+      "imports": 6
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/policy_parser.py",
+      "status": "parsed",
+      "functions": 124,
+      "classes": 11,
+      "imports": 13
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/qrexec_legacy_convert.py",
+      "status": "parsed",
+      "functions": 14,
+      "classes": 0,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/qrexec_policy_daemon.py",
+      "status": "parsed",
+      "functions": 30,
+      "classes": 1,
+      "imports": 10
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/rpcconfirmation.py",
+      "status": "parsed",
+      "functions": 43,
+      "classes": 6,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/server.py",
+      "status": "parsed",
+      "functions": 5,
+      "classes": 1,
+      "imports": 10
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/__init__.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/agent.py",
+      "status": "parsed",
+      "functions": 108,
+      "classes": 5,
+      "imports": 16
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/daemon.py",
+      "status": "parsed",
+      "functions": 80,
+      "classes": 2,
+      "imports": 16
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/qrexec.py",
+      "status": "parsed",
+      "functions": 19,
+      "classes": 2,
+      "imports": 4
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tests/socket/util.py",
+      "status": "parsed",
+      "functions": 3,
+      "classes": 0,
+      "imports": 2
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/__init__.py",
+      "status": "parsed",
+      "functions": 0,
+      "classes": 0,
+      "imports": 0
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_legacy_convert.py",
+      "status": "parsed",
+      "functions": 8,
+      "classes": 2,
+      "imports": 10
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_agent.py",
+      "status": "parsed",
+      "functions": 49,
+      "classes": 5,
+      "imports": 12
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_daemon.py",
+      "status": "parsed",
+      "functions": 7,
+      "classes": 0,
+      "imports": 11
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_exec.py",
+      "status": "parsed",
+      "functions": 12,
+      "classes": 6,
+      "imports": 15
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_graph.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 0,
+      "imports": 8
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qrexec_policy_restore.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 0,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy_admin.py",
+      "status": "parsed",
+      "functions": 1,
+      "classes": 0,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy_editor.py",
+      "status": "parsed",
+      "functions": 5,
+      "classes": 0,
+      "imports": 9
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/tools/qubes_policy_lint.py",
+      "status": "parsed",
+      "functions": 4,
+      "classes": 0,
+      "imports": 5
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/qrexec/utils.py",
+      "status": "parsed",
+      "functions": 8,
+      "classes": 2,
+      "imports": 7
+    },
+    {
+      "path": "qubes-core-qrexec-205db68abd6d89dff1bc03bce8ce0c88749b7248/setup.py",
+      "status": "parsed",
+      "functions": 2,
+      "classes": 1,
+      "imports": 3
+    }
+  ],
+  "craft_source_import": {
+    "coverage": {
+      "examined": 158,
+      "status": "complete"
+    },
+    "ignored": 0,
+    "truncated": false,
+    "languages": {
+      "c-family": 34,
+      "markdown": 2,
+      "other": 82,
+      "python": 40
+    }
+  },
+  "tool_evidence": [
+    {
+      "file": "rea-qubes-core-qrexec-extract.json",
+      "sha256": "ab8bd29100624c5ddc864121236e8bdc2d2331c69685f580dd88ee4a9a94a539"
+    },
+    {
+      "file": "craft-qubes-core-qrexec-extract.json",
+      "sha256": "58513d6d5d397c1531561b4f6b47b6cd09b1fc98dec47218053232d31cab3829"
+    },
+    {
+      "file": "craft-qubes-core-qrexec-source.json",
+      "sha256": "36261dc300f500c42fdf2554481f5d4b264e0f856dce56ec9ae6a8481202d55c"
+    }
+  ]
+}

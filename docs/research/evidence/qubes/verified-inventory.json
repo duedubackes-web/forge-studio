@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-16T10:23:27.083412+00:00",
+  "repositories": [
+    {
+      "source": {
+        "repo": "qubes-core-admin",
+        "branch": "release4.3",
+        "commit": "16d5a7333423497c0dcfd4ced50a69e958b0743b",
+        "url": "https://codeload.github.com/QubesOS/qubes-core-admin/zip/16d5a7333423497c0dcfd4ced50a69e958b0743b",
+        "bytes": 858403,
+        "sha256": "a5c34fb3171bd0b76c7ad6b57c89824d1fd36d79dcc9ef432d2aab148bb1cc9a"
+      },
+      "verification": {
+        "regular_files": 274,
+        "bytes": 4053893,
+        "rea_verified_files": 274,
+        "craft_verified_files": 266,
+        "craft_skipped": [
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:00:08.1",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:00:18.0",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:00:18.1",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:00:18.2",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:00:18.3",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:00:18.4",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:02:00.0",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:02:00.2",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:c0:03.1",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:c0:03.5",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:c1:00.0",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:c5:00.0",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/bus/pci/devices/0000:c6:00.0",
+            "reason": "symlink member is not a regular file"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:00/0000:00:08.1/secondary_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:00/0000:00:08.1/subordinate_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:c0/0000:c0:03.1/secondary_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:c0/0000:c0:03.1/subordinate_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:c0/0000:c0:03.5/0000:c5:00.0/secondary_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:c0/0000:c0:03.5/0000:c5:00.0/subordinate_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:c0/0000:c0:03.5/secondary_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          },
+          {
+            "path": "qubes-core-admin-16d5a7333423497c0dcfd4ced50a69e958b0743b/tests-data/sysfs/sys/devices/pci0000:c0/0000:c0:03.5/subordinate_bus_number",
+            "reason": "name contains ':' (a Windows stream or drive separator)"
+          }
+        ],
+        "rea_matches_archive": true,
+        "craft_materialized_files_match_archive": true
+      },
+      "symlinks": 13,
+      "python": {
+        "files": 137,
+        "parsed": 137,
+        "functions": 3708,
+        "classes": 424
+      },
+      "inventory": {
+        "file": "qubes-core-admin-inventory.json",
+        "sha256": "e23c8fa3c2667883d730417e7cefe6a309b2a1bf8e14a501808282fe17d0caad"
+      }
+    },
+    {
+      "source": {
+        "repo": "qubes-core-qrexec",
+        "branch": "release4.3",
+        "commit": "205db68abd6d89dff1bc03bce8ce0c88749b7248",
+        "url": "https://codeload.github.com/QubesOS/qubes-core-qrexec/zip/205db68abd6d89dff1bc03bce8ce0c88749b7248",
+        "bytes": 840084,
+        "sha256": "6c7fd6a41726240328956748c42c70519b9f38880500c77dfc913ed9ade5afc6"
+      },
+      "verification": {
+        "regular_files": 162,
+        "bytes": 1752116,
+        "rea_verified_files": 162,
+        "craft_verified_files": 162,
+        "craft_skipped": [],
+        "rea_matches_archive": true,
+        "craft_materialized_files_match_archive": true
+      },
+      "symlinks": 0,
+      "python": {
+        "files": 40,
+        "parsed": 40,
+        "functions": 816,
+        "classes": 106
+      },
+      "inventory": {
+        "file": "qubes-core-qrexec-inventory.json",
+        "sha256": "1911995325a40cd51f5396254838f313e409380e3887574b835d4e23c79c8889"
+      }
+    },
+    {
+      "source": {
+        "repo": "qubes-core-admin-client",
+        "branch": "release4.3",
+        "commit": "57a4b6c6baff05217abf071452da141e5a800f33",
+        "url": "https://codeload.github.com/QubesOS/qubes-core-admin-client/zip/57a4b6c6baff05217abf071452da141e5a800f33",
+        "bytes": 483615,
+        "sha256": "b9e38958080457d563daf2f0fa172b039fe0a5636b221ffbe3b1c94d5e3d1263"
+      },
+      "verification": {
+        "regular_files": 178,
+        "bytes": 2035854,
+        "rea_verified_files": 178,
+        "craft_verified_files": 178,
+        "craft_skipped": [
+          {
+            "path": "qubes-core-admin-client-57a4b6c6baff05217abf071452da141e5a800f33/doc/manpages/qvm-start-gui.rst",
+            "reason": "symlink member is not a regular file"
+          }
+        ],
+        "rea_matches_archive": true,
+        "craft_materialized_files_match_archive": true
+      },
+      "symlinks": 1,
+      "python": {
+        "files": 107,
+        "parsed": 107,
+        "functions": 1782,
+        "classes": 258
+      },
+      "inventory": {
+        "file": "qubes-core-admin-client-inventory.json",
+        "sha256": "697bc1ee83e837aabd749e37248d818fbfc472b68e52392c9616375adb17da5f"
+      }
+    }
+  ],
+  "limitations": [
+    "Only three selected source archives; not the Qubes distribution.",
+    "AST counts include tests and do not prove runtime behavior or security.",
+    "Symlink targets are inventoried, not materialized.",
+    "Source import does not reconstruct Python or C semantics."
+  ],
+  "stable_release_observed": {
+    "version": "4.3.2",
+    "source": "https://www.qubes-os.org/downloads/",
+    "page_sha256": "1e56a63b05469399d5c694a941b35323e351c7827e7d5572552b75a9e2a90de8",
+    "iso_downloaded": false,
+    "source_commits_proven_to_match_iso": false
+  }
+}

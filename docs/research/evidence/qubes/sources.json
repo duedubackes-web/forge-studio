@@ -1,0 +1,17 @@
+[
+  {
+    "repo": "qubes-core-admin",
+    "branch": "release4.3",
+    "commit": "16d5a7333423497c0dcfd4ced50a69e958b0743b"
+  },
+  {
+    "repo": "qubes-core-qrexec",
+    "branch": "release4.3",
+    "commit": "205db68abd6d89dff1bc03bce8ce0c88749b7248"
+  },
+  {
+    "repo": "qubes-core-admin-client",
+    "branch": "release4.3",
+    "commit": "57a4b6c6baff05217abf071452da141e5a800f33"
+  }
+]
