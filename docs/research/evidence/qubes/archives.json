@@ -1,0 +1,26 @@
+[
+  {
+    "repo": "qubes-core-admin",
+    "branch": "release4.3",
+    "commit": "16d5a7333423497c0dcfd4ced50a69e958b0743b",
+    "url": "https://codeload.github.com/QubesOS/qubes-core-admin/zip/16d5a7333423497c0dcfd4ced50a69e958b0743b",
+    "bytes": 858403,
+    "sha256": "a5c34fb3171bd0b76c7ad6b57c89824d1fd36d79dcc9ef432d2aab148bb1cc9a"
+  },
+  {
+    "repo": "qubes-core-qrexec",
+    "branch": "release4.3",
+    "commit": "205db68abd6d89dff1bc03bce8ce0c88749b7248",
+    "url": "https://codeload.github.com/QubesOS/qubes-core-qrexec/zip/205db68abd6d89dff1bc03bce8ce0c88749b7248",
+    "bytes": 840084,
+    "sha256": "6c7fd6a41726240328956748c42c70519b9f38880500c77dfc913ed9ade5afc6"
+  },
+  {
+    "repo": "qubes-core-admin-client",
+    "branch": "release4.3",
+    "commit": "57a4b6c6baff05217abf071452da141e5a800f33",
+    "url": "https://codeload.github.com/QubesOS/qubes-core-admin-client/zip/57a4b6c6baff05217abf071452da141e5a800f33",
+    "bytes": 483615,
+    "sha256": "b9e38958080457d563daf2f0fa172b039fe0a5636b221ffbe3b1c94d5e3d1263"
+  }
+]
